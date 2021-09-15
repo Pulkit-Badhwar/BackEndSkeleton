@@ -1,0 +1,9 @@
+const router = require('express').Router();
+
+require('./test')(router);
+require('./authentication')(router);
+require('./fetchFolder')(router);
+
+module.exports = (app) => {
+  app.use('/auth', router);
+};
