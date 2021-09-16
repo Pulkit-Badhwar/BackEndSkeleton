@@ -1,28 +1,23 @@
 const { find } = rootRequire('repo/mysql/archiveReportRepo');
 
-async function groupCategory() {
+async function groupCategory(data) {
   try {
-    let wheat = [];
-    let maize = [];
-    let pulses = [];
-    const offset = 0;
-    const pageSize = 10;
-    const data = await find(offset, pageSize);
-    for(let i = 0; i <= data.length; i++) {
+    let category = [];
+    // const offset = 0;
+    // const pageSize = 10;
+    // const data = await find(offset, pageSize);
+    for(let i = 0; i < data.length; i++) {
       if(data[i].category == 'wheat'){
-        wheat.push(data[i]);
+        category.push('wheat');
       }
       else if(data[i].category == 'maize'){
-        maize.push(data[i]);
-        console.log(maize)
+        category.push('maize');
       }
       else if(data[i].category == 'pulses'){
-        pulses.push(data[i]);
+        category.push('pulses');
       }     
     }
-
-
-    return data;
+    return category;
   } catch (err) {
     throw err;
   }
