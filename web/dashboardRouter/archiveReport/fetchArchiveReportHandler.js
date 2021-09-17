@@ -1,36 +1,31 @@
-/* eslint-disable no-useless-catch */
-const { fetchArchiveReport, groupArchiveCategory } = rootRequire('service/archiveReportService');
+const { fetchArchiveReport } = rootRequire('service/archiveReportService');
 const { fetchClientSubscription } = rootRequire('service/clientSubscriptionService');
+const categoryMap = rootRequire('enums/CategoryMap');
 
 async function handler(req) {
   try {
-    let finalData = [];
+    let finalData = {};
     const statusData = await fetchClientSubscription(req.user.email);
-    const groupData  = await groupArchiveCategory(statusData.active);
-    for(let i = 0; i < groupData.length; i++){
-      const filter = {
-        category: groupData[i],
-        report: req.query.report || '',
-        startDate: req.query.startDate || 'Invalid date',
-        endDate: req.query.endDate || new Date(),
-        pageNumber: req.query.pageNumber || 0,
+    const groupData = statusData.active.map(d => d.category);
+    console.log(`catelist : ${JSON.stringify(groupData)}`);
+
+    for(let j = 0; j < groupData.length; j++){
+      const currentCategory = groupData[j];
+      for (let k=0; k < categoryMap[currentCategory]['reports'].length; k++){
+        const currentReport = categoryMap[currentCategory]['reports'][k];
+        const filter = {
+          category: currentCategory,
+          report: currentReport,
+          startDate: req.query.startDate || 'Invalid date',
+          endDate: req.query.endDate || new Date(),
+          pageNumber: req.query.pageNumber || 0,
+        }
+        const filterData = await fetchArchiveReport(filter);
+        logger.info(`FilterData : report : ${currentReport} :: data : ${JSON.stringify(filterData)}`);
+        finalData[currentReport] = filterData;
       }
-      const filterData = await fetchArchiveReport(filter);
-      finalData.push(filterData)
     }
     return finalData;
-
-    // const filter = {
-    //   category: req.query.groupData || '',
-    //   report: req.query.report || '',
-    //   startDate: req.query.startDate || 'Invalid date',
-    //   endDate: req.query.endDate || new Date(),
-    //   pageNumber: req.query.pageNumber || 0,
-    // }
-
-
-    // const filterData = await fetchArchiveReport(filter);
-    // return filterData;
   } catch (err) {
     throw err;
   }
