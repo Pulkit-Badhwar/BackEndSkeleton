@@ -2,9 +2,8 @@ const { fetchClientSubscription } = rootRequire('service/clientSubscriptionServi
 
 async function handler(req) {
   try {
-    const email = req.query.email;
-    const clientData = await fetchClientSubscription(email);
-    return clientData;
+    const data = await fetchClientSubscription(req.query.email);
+    return data
   } catch (err) {
     throw err;
   }

@@ -1,18 +1,31 @@
-/* eslint-disable no-useless-catch */
 const { fetchArchiveReport } = rootRequire('service/archiveReportService');
+const { fetchClientSubscription } = rootRequire('service/clientSubscriptionService');
+const categoryMap = rootRequire('enums/CategoryMap');
 
 async function handler(req) {
   try {
+    let finalData = {};
+    const statusData = await fetchClientSubscription(req.user.email);
+    const groupData = statusData.active.map(d => d.category);
+    console.log(`catelist : ${JSON.stringify(groupData)}`);
 
-    const filter = {
-      category: req.query.category || '',
-      report: req.query.report || '',
-      startDate: req.query.startDate || 'Invalid date',
-      endDate: req.query.endDate || new Date(),
-      pageNumber: req.query.pageNumber || 0,
+    for(let j = 0; j < groupData.length; j++){
+      const currentCategory = groupData[j];
+      for (let k=0; k < categoryMap[currentCategory]['reports'].length; k++){
+        const currentReport = categoryMap[currentCategory]['reports'][k];
+        const filter = {
+          category: currentCategory,
+          report: currentReport,
+          startDate: req.query.startDate || 'Invalid date',
+          endDate: req.query.endDate || new Date(),
+          pageNumber: req.query.pageNumber || 0,
+        }
+        const filterData = await fetchArchiveReport(filter);
+        logger.info(`FilterData : report : ${currentReport} :: data : ${JSON.stringify(filterData)}`);
+        finalData[currentReport] = filterData;
+      }
     }
-    const filterData = await fetchArchiveReport(filter);
-    return filterData;
+    return finalData;
   } catch (err) {
     throw err;
   }
