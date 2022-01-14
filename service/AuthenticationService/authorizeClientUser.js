@@ -1,7 +1,7 @@
 /* eslint-disable no-useless-catch */
 const Boom = require('boom');
 
-const { getClientUserByEmail } = rootRequire('service/clientUserService');
+const { getClientUserByEmail } = require('../impactUserService')
 const { generateToken } = rootRequire('utils/TokenManagerUtils');
 
 async function authorizeClientUser(email, password) {
