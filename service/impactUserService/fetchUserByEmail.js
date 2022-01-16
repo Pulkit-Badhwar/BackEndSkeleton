@@ -1,4 +1,4 @@
-const { findByEmail } = require('../../repo/posgresSQL/queries')
+const { findByEmail } = require('../../repo/posgresSQL/userRepo')
 
 async function fetchUserByEmail(userEmail) {
   try {

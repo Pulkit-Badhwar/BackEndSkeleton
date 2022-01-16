@@ -1,4 +1,4 @@
-const { find } = require('../../repo/posgresSQL/queries');
+const { find } = require('../../repo/posgresSQL/userRepo');
 
 async function fetchUser() {
   try {

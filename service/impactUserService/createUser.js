@@ -1,4 +1,4 @@
-const { save } = require('../../repo/posgresSQL/queries');
+const { save } = require('../../repo/posgresSQL/userRepo');
 
 async function createUser(user) {
   try {

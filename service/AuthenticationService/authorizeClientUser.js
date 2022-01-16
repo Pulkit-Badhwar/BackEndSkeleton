@@ -1,17 +1,14 @@
 /* eslint-disable no-useless-catch */
 const Boom = require('boom');
 
-const { getClientUserByEmail } = require('../impactUserService')
+const { fetchUserByEmail } = require('../impactUserService')
 const { generateToken } = rootRequire('utils/TokenManagerUtils');
 
 async function authorizeClientUser(email, password) {
   try {
     logger.info(`authorizeAdminUser :: Email : ${email} :: password : ${password}`);
-    const userArr = await getClientUserByEmail(email);
-    logger.info(`UserArr : ${JSON.stringify(userArr)}`);
-    if (!userArr.length) throw new Boom('User Does not exist');
-
-    const user = userArr[0];
+    const user = await fetchUserByEmail(email);
+    console.log(user);
     if (user.password === password) {
       const token = generateToken(email);
       return { user, token };

@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-catch */
 const { fetchUser } = require('../../../service/impactUserService');
 
 async function handler() {
