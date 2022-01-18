@@ -8,7 +8,6 @@ async function authorizeClientUser(email, password) {
   try {
     logger.info(`authorizeAdminUser :: Email : ${email} :: password : ${password}`);
     const user = await fetchUserByEmail(email);
-    console.log(user);
     if (user.password === password) {
       const token = generateToken(email);
       return { user, token };
