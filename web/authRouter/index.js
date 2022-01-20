@@ -1,6 +1,6 @@
 const router = require('express').Router();
 
-require('./test')(router);
+require('./SignUp')(router);
 require('./authentication')(router);
 
 module.exports = (app) => {

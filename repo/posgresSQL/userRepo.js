@@ -9,8 +9,9 @@ const pool = new Pool({
 
 
 function save(user) {
+  console.log(user);
     return new Promise((resolve, reject) => {
-      pool.query('INSERT INTO  public."ImpactRooms" (name, email, password) VALUES ($1, $2, $3)', [user.name, user.email, user.password], (err, result) => {
+      pool.query('INSERT INTO  public."ImpactRooms" (firstName, lastName, email, companyName, password) VALUES ($1, $2, $3, $4, $5)', [user.firstName, user.lastName, user.email, user.companyName, user.password], (err, result) => {
         if (err) {
           console.log('error');
           reject(err);
