@@ -22,8 +22,6 @@ const decrypt = (hash) => {
 
     const decrpyted = Buffer.concat([decipher.update(Buffer.from(hash.content, 'hex')), decipher.final()]);
 
-    console.log(decrpyted.toString());
-
     return decrpyted.toString();
 };
 

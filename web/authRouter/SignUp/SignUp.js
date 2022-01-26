@@ -1,6 +1,5 @@
 const { createUser } = require('../../../service/impactUserService');
 const { isCharactersString, isEmailString, isPasswordString } = require('../../../service/validate/regexValidate');
-const crypto = require("crypto");
 const { encrypt } = require('../../../service/crypto/crypto')
 const nodemailer = require('nodemailer');
 

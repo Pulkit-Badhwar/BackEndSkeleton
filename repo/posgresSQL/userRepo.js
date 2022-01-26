@@ -61,9 +61,24 @@ function findByCode(code) {
   });
 }
 
-function update(user) {
+function updateCode(user) {
   return new Promise((resolve, reject) => {
-    pool.query(`UPDATE public."ImpactRooms" SET isvalid= '${user.isValid}' WHERE code = '${user.uniqueString}'`, (err, result) => {
+    pool.query(`UPDATE public."ImpactRooms" SET isvalid = '${user.isValid}' WHERE code = '${user.uniqueString}'`, (err, result) => {
+      if (err) {
+        console.log('error');
+        reject(err);
+      }
+      resolve(result);
+    });
+  });
+}
+
+
+function updateEmail(user) {
+  const password = JSON.stringify(user.password);
+  return new Promise((resolve, reject) => {
+    // SET json_field = json_field || new_json_data;
+    pool.query(`UPDATE public."ImpactRooms" SET password = password || '${password}' WHERE email = '${user.email}'`, (err, result) => {
       if (err) {
         console.log('error');
         reject(err);
@@ -81,7 +96,8 @@ module.exports = {
     save,
     findByEmail,
     findByCode,
-    update
+    updateCode,
+    updateEmail,
 }
 
 

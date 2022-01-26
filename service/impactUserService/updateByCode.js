@@ -1,8 +1,8 @@
-const { update } = require('../../repo/posgresSQL/userRepo');
+const { updateCode } = require('../../repo/posgresSQL/userRepo');
 
 async function updateByCode(user) {
   try {
-    const data = await update(user);
+    const data = await updateCode(user);
     return data;
   } catch (err) {
     throw err;
