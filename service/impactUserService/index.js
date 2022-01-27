@@ -2,14 +2,14 @@ const fetchUser = require('./fetchUser');
 const fetchUserByEmail = require('./fetchUserByEmail');
 const createUser = require('./createUser');
 const fetchUserByCode = require('./fetchUserByCode');
-const updateByCode = require('./updateByCode');
-const updateByEmail = require('./updateByEmail');
+const updateUserByCode = require('./updateUserByCode');
+const updateUserByEmail = require('./updateUserByEmail');
 
 module.exports = {
     fetchUser,
     fetchUserByEmail,
     createUser,
     fetchUserByCode,
-    updateByCode,
-    updateByEmail
+    updateUserByCode,
+    updateUserByEmail
 };

@@ -61,7 +61,7 @@ function findByCode(code) {
   });
 }
 
-function updateCode(user) {
+function updateByCode(user) {
   return new Promise((resolve, reject) => {
     pool.query(`UPDATE public."ImpactRooms" SET isvalid = '${user.isValid}' WHERE code = '${user.uniqueString}'`, (err, result) => {
       if (err) {
@@ -74,7 +74,7 @@ function updateCode(user) {
 }
 
 
-function updateEmail(user) {
+function updateByEmail(user) {
   const password = JSON.stringify(user.password);
   return new Promise((resolve, reject) => {
     // SET json_field = json_field || new_json_data;
@@ -96,8 +96,8 @@ module.exports = {
     save,
     findByEmail,
     findByCode,
-    updateCode,
-    updateEmail,
+    updateByCode,
+    updateByEmail,
 }
 
 

@@ -1,5 +1,5 @@
 const { fetchUserByCode } = require('../../../service/impactUserService');
-const { updateByCode } = require('../../../service/impactUserService');
+const { updateUserByCode } = require('../../../service/impactUserService');
 
 
 async function getCode(req,res){
@@ -10,7 +10,7 @@ async function getCode(req,res){
         uniqueString : uniqueString,
     }
     if (user) {
-        updateByCode(data);
+        updateUserByCode(data);
         res.redirect('http://localhost:3100/Verified')
     }
     else{

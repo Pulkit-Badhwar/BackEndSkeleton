@@ -1,4 +1,4 @@
-const { updateByEmail } = require('../../../service/impactUserService');
+const { updateUserByEmail } = require('../../../service/impactUserService');
 const { encrypt } = require('../../../service/crypto/crypto')
 
 async function handler(req) {
@@ -8,7 +8,7 @@ async function handler(req) {
             email: req.body.email || null,
             password: hash || null
         };
-        const result = await updateByEmail(user);
+        const result = await updateUserByEmail(user);
         return result;
     } catch (err) {
         throw err;
