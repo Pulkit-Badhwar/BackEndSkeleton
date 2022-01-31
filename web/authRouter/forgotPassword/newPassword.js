@@ -1,5 +1,4 @@
 const { fetchUserByCode } = require('../../../service/impactUserService');
-const { updateByCode } = require('../../../service/impactUserService');
 
 
 async function newPassword(req,res){

@@ -11,7 +11,7 @@ async function getCode(req,res){
     }
     if (user) {
         updateUserByCode(data);
-        res.redirect('http://localhost:3100/Verified')
+        res.redirect('http://localhost:3100/Verified');
     }
     else{
         console.log('error in finding user');

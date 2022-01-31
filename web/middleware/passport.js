@@ -47,14 +47,10 @@ passport.use(new Local({
     const reqEmail = req.body.email;
     const reqPassword = req.body.password;
 
-    let abc = null;
-
     const userData = fetchForEmail(reqEmail);
 
     userData.then(res => {
       if (res.isvalid == 'true') {
-
-
         logger.info(`Passport.js :: email : ${reqEmail} :: password : ${reqPassword}`);
         const authResult = authorizeClientUser(reqEmail, reqPassword);
         authResult.then(({ user, token }) => {
