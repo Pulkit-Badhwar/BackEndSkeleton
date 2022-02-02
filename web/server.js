@@ -15,7 +15,7 @@ function init() {
   xssFilter(app);
   app.get('/favicon.ico', (req, res) => res.status(204));
   authRouter(app);
-  tokenAuthentication(app);
+  // tokenAuthentication(app);
   dashboardRouter(app);
   handleError(app);
 
