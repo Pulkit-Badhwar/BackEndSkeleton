@@ -6,7 +6,9 @@ require('./clientTracker')(router);
 require('./impactUser')(router);
 require('./company')(router);
 require('./buisness')(router);
-require('./organization')(router)
+require('./organization')(router);
+require('./funding')(router);
+require('./productStage')(router);
 
 module.exports = (app) => {
   app.use('/api', router);

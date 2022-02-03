@@ -6,6 +6,10 @@ async function handler(req) {
             CompanyID : req.body.answers[0].text,
             SDGGoals : req.body.answers[1].choices.labels,
             SDG_Imp : req.body.answers[2].choice.label,
+            // if impact plays anyrole role is selected
+            // impact vision yes/no
+            // if impact vision yes tell impact vision
+
             Strategy : req.body.answers[3].boolean,
             Help_Build_one : req.body.answers[4]. boolean,
             CEO_Women : req.body.answers[5].choice.label,
