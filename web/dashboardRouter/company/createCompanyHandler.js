@@ -20,6 +20,7 @@ async function handler(req) {
 
 
             // company questions from here 
+            // HQ city Where
             Company_Name : req.body.answers.find(x => x.field.id === '1QCvzy4uRtqp').text,
             Year_Founded : req.body.answers.find(x => x.field.id === 'DCqRxTbrmcvS').date,
 
