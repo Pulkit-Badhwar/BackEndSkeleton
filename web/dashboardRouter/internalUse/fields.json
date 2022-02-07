@@ -1,0 +1,1999 @@
+[
+    {
+        "id": "XuEuRrLKTqxa",
+        "title": "Hi {{hidden:first_name}}, welcome back to module two of your company evaluation! \n\nTo allocate the this to the right company, please enter your Company ID. This number will be required at the beginning of every module to link the data to your personal profile.\n\nThe Company ID can be found in your Impact Rooms on the right hand side of your dashboard.",
+        "ref": "cdde0fc7-8256-4a77-a67b-7a82e381950f",
+        "dbAttributeName": "CompanyID",
+        "properties": {
+            "description": "The number will look like CO123456"
+        },
+        "validations": {
+            "required": false
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "ja6YfnDaT1dt",
+        "title": "At Impact Rooms, it is important that the companies we support make a net positive impact on society and/or the environment. \n\nYou will complete a separate Impact report with our partner ImpactNexus after you finish this evaluation but a couple of questions from us first...",
+        "ref": "cd46860b-d141-4e2c-bb59-0cdab7f2299d",
+        "properties": {
+            "button_text": "Continue",
+            "hide_marks": true
+        },
+        "type": "statement",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/KXgtktgPybxc",
+            "properties": {
+                "description": "ImpactNexus_Logo_RGB-1-1024x187"
+            }
+        },
+        "layout": {
+            "type": "float",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/KXgtktgPybxc",
+                "properties": {
+                    "description": "ImpactNexus_Logo_RGB-1-1024x187"
+                }
+            },
+            "placement": "left"
+        }
+    },
+    {
+        "id": "h3MZWNCqPzTg",
+        "title": "What Sustainable Development Goals (SDG's) does {{hidden:company_name}} solve for?",
+        "ref": "0f40bf74-274c-4d3b-af03-52a110d0df25",
+        "properties": {
+            "description": "Check all that apply",
+            "randomize": false,
+            "allow_multiple_selection": true,
+            "allow_other_choice": false,
+            "vertical_alignment": true,
+            "choices": [
+                {
+                    "id": "GMgbWMIEpo2v",
+                    "ref": "139a6020-d63c-4566-beed-3e7eac8c5171",
+                    "label": "No Poverty"
+                },
+                {
+                    "id": "lDZ6Vq4F4GV2",
+                    "ref": "d5c80d07-7f86-4cb5-a5c3-2820b44f0bc8",
+                    "label": "Zero Hunger"
+                },
+                {
+                    "id": "zb6jGwODizY2",
+                    "ref": "f6d79078-f91c-4ee4-8a97-e3241c424220",
+                    "label": "Good Health and Well-being"
+                },
+                {
+                    "id": "pmqTZyXtIcR8",
+                    "ref": "bcf25620-a296-472b-a36a-c6ad7cef10a1",
+                    "label": "Quality Education"
+                },
+                {
+                    "id": "55ee7Y81ZJG1",
+                    "ref": "717f94f4-a369-4347-814a-f0de5a6ad6cf",
+                    "label": "Gender Equality"
+                },
+                {
+                    "id": "qicY66p6bsk7",
+                    "ref": "b6e7ec02-d34a-4bfd-af91-1c1b55d80b3a",
+                    "label": "Clean Water and Sanitation"
+                },
+                {
+                    "id": "yvDuYnvFAoZD",
+                    "ref": "ec8be64c-082d-440a-a7b0-b10e508e044e",
+                    "label": "Affordable and Clean Energy"
+                },
+                {
+                    "id": "Qh7Ff4FXlHhf",
+                    "ref": "cc8d6945-deec-4bb4-a3e7-f64e0edee061",
+                    "label": "Decent work and Economic Growth"
+                },
+                {
+                    "id": "HoU5Dnv0s8Zd",
+                    "ref": "32731410-9211-478a-9f14-0c2785060dee",
+                    "label": "Industry, Innovation and Infrastructure"
+                },
+                {
+                    "id": "zopfcprsSHH9",
+                    "ref": "55fef23a-1b75-415f-b323-4279bd25ad4e",
+                    "label": "Reduced Inequalities"
+                },
+                {
+                    "id": "vYQLggrOBBBe",
+                    "ref": "6f3f98d6-25b7-4148-b00a-58a5366755a1",
+                    "label": "Sustainable Cities and Communities"
+                },
+                {
+                    "id": "is2j07kAV8J5",
+                    "ref": "88e7aab9-5cd6-4782-9462-8f29809a6416",
+                    "label": "Responsible Consumption and Production"
+                },
+                {
+                    "id": "DpUmqZcSvjDZ",
+                    "ref": "4cc4a1b4-58a0-4260-888f-f534a7a46948",
+                    "label": "Climate Action"
+                },
+                {
+                    "id": "78kawVuoCSwv",
+                    "ref": "ac2bc9c8-d4e1-4979-a3e8-fd9113c9c6c8",
+                    "label": "Life Below Water"
+                },
+                {
+                    "id": "g1HtsKvvRodl",
+                    "ref": "7f087b5d-2b72-4529-936f-00399d48e0cf",
+                    "label": "Life On Land"
+                },
+                {
+                    "id": "bGngWlf4Lbx4",
+                    "ref": "8ce67aa4-b651-4fc2-8f5e-64b7faedbfd0",
+                    "label": "Peace, Justice and Strong Instritutions"
+                },
+                {
+                    "id": "kcrvPVl8Kd2B",
+                    "ref": "29ca6d5c-8ffc-4b02-b78d-b3ddc98d2d8e",
+                    "label": "Partnerships for the goals"
+                }
+            ]
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "multiple_choice",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/biuRaXkkFHUz",
+            "properties": {
+                "description": "original-15"
+            }
+        },
+        "layout": {
+            "type": "float",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/biuRaXkkFHUz",
+                "properties": {
+                    "description": "original-15"
+                }
+            },
+            "placement": "right"
+        }
+    },
+    {
+        "id": "L8oVgqmegDtF",
+        "title": "How important is the role of impact and/or ESG in {{hidden:company_name}}'s vision?",
+        "ref": "c43eaa8f-5d0a-4ffa-9d09-61c657d11f01",
+        "properties": {
+            "randomize": false,
+            "allow_multiple_selection": false,
+            "allow_other_choice": false,
+            "vertical_alignment": true,
+            "choices": [
+                {
+                    "id": "pg80QE1YUJC8",
+                    "ref": "f30df1b4-4dac-4801-a1c0-d8e973258494",
+                    "label": "Impact is not important"
+                },
+                {
+                    "id": "NY011eUiVYEs",
+                    "ref": "28a00690-2472-4460-89b2-11c95780abcc",
+                    "label": "Impact plays a role"
+                },
+                {
+                    "id": "smxgKVKaPPwU",
+                    "ref": "f687ed93-55b8-45cf-86c4-962c5274d20d",
+                    "label": "Impact is important"
+                },
+                {
+                    "id": "7ipTZ4e8kTjI",
+                    "ref": "105709c0-2d47-4248-8b0d-2a24e49bcac4",
+                    "label": "Impact is a core part of our vision"
+                }
+            ]
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "multiple_choice",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/2YQLTkDSdW5L",
+            "properties": {
+                "description": "grow"
+            }
+        },
+        "layout": {
+            "type": "split",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/2YQLTkDSdW5L",
+                "properties": {
+                    "brightness": 0,
+                    "description": "grow"
+                }
+            },
+            "placement": "left"
+        }
+    },
+    {
+        "id": "xjJMXXWHr2p0",
+        "title": "Do you have an impact vision?",
+        "ref": "68f1ab27-40ec-418a-8ec5-34dadb1cb6be",
+        "properties": {
+            "description": "You can copy and paste the vision here."
+        },
+        "validations": {
+            "required": false
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "38JUvMNPozmi",
+        "title": "What is your Impact vision?",
+        "ref": "77e77067-551b-4d16-a63e-633219f659bc",
+        "properties": {
+            "description": "e.g. to create sustainable income for 10,000 rural households "
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "long_text"
+    },
+    {
+        "id": "HVtT2vpPcl1m",
+        "title": "Do you have a formal Impact and/or ESG strategy? ",
+        "ref": "efc45076-38a7-48c8-937f-38848a2ec497",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "yes_no",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/Exggmvsqphn5",
+            "properties": {
+                "description": "ecosystem"
+            }
+        }
+    },
+    {
+        "id": "CryTWguRD9Wd",
+        "title": "Would you like us to help you build one? ",
+        "ref": "d46c6780-09b3-4e1a-89fd-bcb9cda8777c",
+        "properties": {
+            "description": "This can be important if you are interested in Impact Investors "
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "yes_no",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/rTGWFmVPE8MP",
+            "properties": {
+                "description": "sustain"
+            }
+        }
+    },
+    {
+        "id": "OS3ZLAIg2IGr",
+        "title": "Is your CEO and/ or Founder(s) a Women?",
+        "ref": "b342b345-8eb3-408f-a277-7e4efd0299c4",
+        "properties": {
+            "randomize": false,
+            "allow_multiple_selection": false,
+            "allow_other_choice": false,
+            "vertical_alignment": true,
+            "choices": [
+                {
+                    "id": "hcUn1kHz9F4A",
+                    "ref": "cc4ea3a0-fdee-406b-81af-0428f27ba0d0",
+                    "label": "Yes"
+                },
+                {
+                    "id": "9r7Q8Y1ePXS8",
+                    "ref": "30f8c992-e6b6-4d0a-9780-dd44f24f394c",
+                    "label": "No"
+                }
+            ]
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "multiple_choice"
+    },
+    {
+        "id": "xub3EblfV63M",
+        "title": "How many women are there in your leadership team?",
+        "ref": "670f39a8-b844-4d77-902d-c40f9a05cdae",
+        "properties": {
+            "randomize": false,
+            "allow_multiple_selection": false,
+            "allow_other_choice": false,
+            "vertical_alignment": true,
+            "choices": [
+                {
+                    "id": "TxNDgd09Fz8y",
+                    "ref": "e8b62e89-ed60-4369-8930-c39df09f0d98",
+                    "label": "None"
+                },
+                {
+                    "id": "heTJcjfi2UxU",
+                    "ref": "214a22ba-9100-40fa-a557-8e9c38dc6db5",
+                    "label": "All"
+                },
+                {
+                    "id": "c5Ak6aWCWOra",
+                    "ref": "c1a8153d-b419-4571-9a3c-f011105a6083",
+                    "label": "1"
+                },
+                {
+                    "id": "DNvn3x711O7Q",
+                    "ref": "2b4d7569-2509-451b-928c-4af1814c5700",
+                    "label": "2"
+                },
+                {
+                    "id": "zfcXKxkcqhwe",
+                    "ref": "a52f8033-675d-420c-bccf-803e22d852f9",
+                    "label": "3 or more"
+                }
+            ]
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "multiple_choice"
+    },
+    {
+        "id": "U1OVpll7KvUg",
+        "title": "Is your CEO and/or Founder(s) of African origin?",
+        "ref": "563466dc-93bf-4abc-89bc-2763e179b122",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "6tcdKmbSPRxX",
+        "title": "How many African leadership roles do you have?",
+        "ref": "3ded8642-f9f8-4fa7-8970-72c385ff5856",
+        "properties": {
+            "randomize": false,
+            "allow_multiple_selection": false,
+            "allow_other_choice": false,
+            "vertical_alignment": true,
+            "choices": [
+                {
+                    "id": "QwSuWsEBeJgU",
+                    "ref": "fa1b80b3-9386-49f8-8265-709083788c2f",
+                    "label": "None"
+                },
+                {
+                    "id": "y6raRLkAvMmB",
+                    "ref": "fa53d5f9-e986-47bf-8723-7d7803efd130",
+                    "label": "All"
+                },
+                {
+                    "id": "Z7I5FcLUcVXR",
+                    "ref": "5e899c72-8aa3-4dec-ab9e-1a4e83deca04",
+                    "label": "1"
+                },
+                {
+                    "id": "m76xLdV1ty9N",
+                    "ref": "0df87730-9a09-4601-a8fc-f31bd75700c5",
+                    "label": "2"
+                },
+                {
+                    "id": "snGJ8McW3Sn6",
+                    "ref": "c6e7b551-09da-4fce-9903-930b10422e09",
+                    "label": "3 or more"
+                }
+            ]
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "multiple_choice"
+    },
+    {
+        "id": "wWACfcIasKeD",
+        "title": "That is our Impact section done {{hidden:first_name}}.",
+        "ref": "88255af4-7410-41ee-9f3d-485630a8b87d",
+        "properties": {
+            "description": "Click continue ",
+            "button_text": "Continue",
+            "hide_marks": true
+        },
+        "type": "statement"
+    },
+    {
+        "id": "rFsziTJDzVE6",
+        "title": "It is not always the most enjoyable part of running a business but being compliant and abiding by the relevant regulations for your company is critical!\n\nLet's get this over with quickly {{hidden:first_name}}.",
+        "ref": "8604838a-101b-453c-8af5-f5ea7efb3c6f",
+        "properties": {
+            "button_text": "Continue",
+            "hide_marks": true
+        },
+        "type": "statement",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/t8QGHmdsZZGn",
+            "properties": {
+                "description": "scales"
+            }
+        },
+        "layout": {
+            "type": "split",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/t8QGHmdsZZGn",
+                "properties": {
+                    "brightness": 0,
+                    "description": "scales"
+                }
+            },
+            "placement": "left"
+        }
+    },
+    {
+        "id": "Fnee8RNIVDCN",
+        "title": "Does {{hidden:company_name}}require any licenses or regulatory compliance for the sectors and countries it operates in?",
+        "ref": "d0e559af-9d56-4a83-a25a-8374e83c3316",
+        "properties": {
+            "description": "This applies to the licenses or regulations you currently have or comply with as well as those licenses you intend to get or regulations to intend to comply with. ",
+            "randomize": false,
+            "allow_multiple_selection": false,
+            "allow_other_choice": false,
+            "vertical_alignment": true,
+            "choices": [
+                {
+                    "id": "R9gzfpNLEBWS",
+                    "ref": "091c52a6-181a-41db-b4e2-7ba73c5b1694",
+                    "label": "Yes, license only"
+                },
+                {
+                    "id": "gD002iWTKBZb",
+                    "ref": "8ca0fae2-fae3-4b9f-8963-910fa8b6acb0",
+                    "label": "Yes, regulation only"
+                },
+                {
+                    "id": "8h52yRFn7mEt",
+                    "ref": "bd4544c6-f9b4-49be-bd13-8fd6a01477e0",
+                    "label": "Yes, both license and regulation"
+                },
+                {
+                    "id": "tUDzbD2RrIgT",
+                    "ref": "80bc9090-7cb9-47ac-98c0-d26c0008b4a3",
+                    "label": "No"
+                },
+                {
+                    "id": "GlOPrWdCiN4h",
+                    "ref": "08cc052e-008f-43a8-9569-6062949b2229",
+                    "label": "I am not sure"
+                }
+            ]
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "multiple_choice",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/tM7j8C7DYfMg",
+            "properties": {
+                "description": "Certificate"
+            }
+        },
+        "layout": {
+            "type": "split",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/tM7j8C7DYfMg",
+                "properties": {
+                    "brightness": 0,
+                    "description": "Certificate"
+                }
+            },
+            "placement": "right"
+        }
+    },
+    {
+        "id": "c9lgRcVqLPnk",
+        "title": "Give me the name or description of the license you have or intend to get.",
+        "ref": "a9276f0a-d9e7-470a-9a88-7d49c2c85d2a",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "u2EdGnDU5xT9",
+        "title": "For what country?",
+        "ref": "89f66b7b-e063-40ef-9682-060d90ab4c0c",
+        "properties": {
+            "randomize": false,
+            "alphabetical_order": false,
+            "choices": [
+                {
+                    "id": "ZCn9peL8ozFM",
+                    "ref": "daaf617b-cc75-4458-9120-1d70bd5c4849",
+                    "label": "Kenya"
+                },
+                {
+                    "id": "Z1tGauptppjW",
+                    "ref": "6f532bba-2e33-4102-a833-56e6edb39816",
+                    "label": "Nigeria"
+                },
+                {
+                    "id": "4nDZ3gRG56Nk",
+                    "ref": "db9a8b71-d50c-4ebf-988f-ef7e1868dc4c",
+                    "label": "South Africa"
+                },
+                {
+                    "id": "Eo5pz41EkaAo",
+                    "ref": "273b8ae6-3798-4c67-b086-8ca490478041",
+                    "label": "Egypt"
+                },
+                {
+                    "id": "EjewEKbmbU2I",
+                    "ref": "4b6f9ad7-2307-46a7-b364-d3f69327dd97",
+                    "label": "Ghana"
+                },
+                {
+                    "id": "E23ybocSuUdh",
+                    "ref": "e1eca49e-56c6-4e37-ac35-179ce0c6b703",
+                    "label": "Rwanda"
+                },
+                {
+                    "id": "jURQzgj2poBk",
+                    "ref": "4414660b-6484-40a4-b0cf-f16f62649309",
+                    "label": "Uganda"
+                },
+                {
+                    "id": "Xg600UAZ1APp",
+                    "ref": "ea932d40-c825-4f94-90b8-2be2b4d48cb8",
+                    "label": "Zambia"
+                },
+                {
+                    "id": "4qZ6E7Grd4VT",
+                    "ref": "9043cd9f-8c48-46c5-9262-84455e12b9d0",
+                    "label": "Tanzania"
+                },
+                {
+                    "id": "ofIzEvl8CNhO",
+                    "ref": "80096ff9-163a-48e4-a224-04aae9b6432f",
+                    "label": "Algeria"
+                },
+                {
+                    "id": "uuXNHmxUkJE4",
+                    "ref": "5c0c0590-82c3-4832-b7ae-e2e575f2a002",
+                    "label": "Angola"
+                },
+                {
+                    "id": "lWkw0z04IDl6",
+                    "ref": "305de72b-7c6d-4834-97ca-41b29cf3e8ba",
+                    "label": "Benin"
+                },
+                {
+                    "id": "NTPUU4MEAXUr",
+                    "ref": "367143ff-df0b-48ca-87c0-07b254217742",
+                    "label": "Botswana"
+                },
+                {
+                    "id": "C75JVwQf5dRX",
+                    "ref": "2a161d19-4d43-481c-b923-701c06f7f077",
+                    "label": "Burkina Faso"
+                },
+                {
+                    "id": "48NUOQaKAJP2",
+                    "ref": "c059fa59-238c-4ecd-a90b-ac9fd00e60d7",
+                    "label": "Burundi"
+                },
+                {
+                    "id": "h8LREMqkGyyU",
+                    "ref": "37bee27f-1c6a-4a40-af3b-4a91531aeaf7",
+                    "label": "Cameroon"
+                },
+                {
+                    "id": "7JikT6th3UfQ",
+                    "ref": "15f87b65-a7bb-4ed9-8578-b99ca86e15bd",
+                    "label": "Central African Republic"
+                },
+                {
+                    "id": "ynnEDKFrgsOT",
+                    "ref": "6a3d7213-5518-4ff9-9083-cab77fbf0125",
+                    "label": "Comoros"
+                },
+                {
+                    "id": "rMgP0SBqRCLy",
+                    "ref": "3a5b3371-7dca-4be6-90e2-0a2da5fe2074",
+                    "label": "Democratic Republic of the Congo"
+                },
+                {
+                    "id": "rXpKLFRALfAW",
+                    "ref": "f861b4c4-4583-4bb6-b86a-67983df053c8",
+                    "label": "Ethiopia"
+                },
+                {
+                    "id": "szOkhYUpozhK",
+                    "ref": "59e5fade-bf12-48b8-ae03-e833070b2360",
+                    "label": "Gabon"
+                },
+                {
+                    "id": "UwgNbfRIoZGG",
+                    "ref": "25c56a6b-5a45-4b91-b6c7-3c955665d9cc",
+                    "label": "Gambia"
+                },
+                {
+                    "id": "PxEwEn7Vmb3t",
+                    "ref": "983a3bac-9546-419c-b945-c22659d938cd",
+                    "label": "Guinea"
+                },
+                {
+                    "id": "EivX5cz5KW9a",
+                    "ref": "935d7be2-ca1c-487f-8106-3e5e702454f6",
+                    "label": "Ivory Coast"
+                },
+                {
+                    "id": "z3vgmhH93mji",
+                    "ref": "05fbe966-292b-44e3-9258-74f433867d03",
+                    "label": "Lesotho"
+                },
+                {
+                    "id": "sV0e81aXXPJ6",
+                    "ref": "49dcbe97-52d9-4c66-9ea0-9dd885b5aab1",
+                    "label": "Liberia"
+                },
+                {
+                    "id": "6iD9jUY6accZ",
+                    "ref": "e7029241-3416-4a98-a74b-2c78971f9fb3",
+                    "label": "Madagascar"
+                },
+                {
+                    "id": "mHoIDMO8ZcsG",
+                    "ref": "5e7c5c67-215a-4cbc-9e5d-e10715814d43",
+                    "label": "Malawi"
+                },
+                {
+                    "id": "cKtitVVuUqKb",
+                    "ref": "8b04406e-9b4b-4321-b744-1fcd59d11cd4",
+                    "label": "Mali"
+                },
+                {
+                    "id": "mHHGRsb3dv4H",
+                    "ref": "16b0020d-22d4-4032-92fc-273aac47d24e",
+                    "label": "Mauritius"
+                },
+                {
+                    "id": "WUTIRwJ9CbdM",
+                    "ref": "d4624d81-cbcb-4e2b-9591-d2238fe8fe72",
+                    "label": "Morocco"
+                },
+                {
+                    "id": "PdYEQOn9xc5V",
+                    "ref": "3d3979f6-fe1b-488c-a46e-73fdc382fd65",
+                    "label": "Mozambique"
+                },
+                {
+                    "id": "IjSAxJWBpKoG",
+                    "ref": "6ecc5135-7ffa-4949-80a6-5c95a9229958",
+                    "label": "Namibia"
+                },
+                {
+                    "id": "2BJHe8vT0YTo",
+                    "ref": "f701287e-ede8-47ee-bbb8-838045d1c251",
+                    "label": "Niger"
+                },
+                {
+                    "id": "UxLYa4es6sgJ",
+                    "ref": "a1293247-9b54-466e-b7cc-58c327b4c338",
+                    "label": "Republic of the Congo"
+                },
+                {
+                    "id": "VcBM9c4FRpTu",
+                    "ref": "d9d5900a-67ee-425e-9225-ef8fd182b8a7",
+                    "label": "Senegal"
+                },
+                {
+                    "id": "U9tqfcosuykt",
+                    "ref": "68fe2366-2614-4fa2-bd92-8603c88d6aac",
+                    "label": "Seychelles"
+                },
+                {
+                    "id": "yiNxma5PN7AQ",
+                    "ref": "d04f6639-7a71-47e7-b948-5bf9048a2da3",
+                    "label": "South Sudan"
+                },
+                {
+                    "id": "ke3v8z6KwzPU",
+                    "ref": "dfbd803c-b8fd-4e62-b040-89bb0eef2267",
+                    "label": "Sudan"
+                },
+                {
+                    "id": "o67375hjfNR5",
+                    "ref": "543cd25c-67a2-41a3-bae0-8eb531eaef3c",
+                    "label": "Tanzania"
+                },
+                {
+                    "id": "0itT4j3xH3fz",
+                    "ref": "2c1d533b-495a-4af9-af0e-097bf62dc778",
+                    "label": "Togo"
+                },
+                {
+                    "id": "Zh4qKUbho4nh",
+                    "ref": "6ee81ab0-cebd-4245-9dce-4858b4045f67",
+                    "label": "Tunisia"
+                },
+                {
+                    "id": "4qpsWalzzKv4",
+                    "ref": "5a814988-fc45-453e-9b72-707ba78f1332",
+                    "label": "USA"
+                },
+                {
+                    "id": "W8bAWmiBlZo2",
+                    "ref": "0c59a0c1-209a-48b9-89a8-3ffffe73379f",
+                    "label": "Zimbabwe"
+                },
+                {
+                    "id": "m5Za35ak5g9m",
+                    "ref": "f2f22338-b50a-4746-ba07-785d89f0a7e7",
+                    "label": "Not listed"
+                }
+            ]
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "dropdown"
+    },
+    {
+        "id": "o9hwc9W7CqAm",
+        "title": "Is there a second license you have or intend getting? ",
+        "ref": "b913e1d6-a2d9-49cf-a6c9-13c7ab8203a2",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "s5IG6Lt8yOBb",
+        "title": "Give me the name or description of the second license you have or intend to get.",
+        "ref": "2290a014-3538-4618-86b4-9cc98048e1a0",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "eTUdLtNZxRwE",
+        "title": "For what country?",
+        "ref": "35bc6517-31c1-4782-894a-94d52cd31e5a",
+        "properties": {
+            "randomize": false,
+            "alphabetical_order": false,
+            "choices": [
+                {
+                    "id": "vPJRwbYyDV06",
+                    "ref": "2a07c98a-9510-4654-9326-263576caca07",
+                    "label": "Kenya"
+                },
+                {
+                    "id": "gmAZgLDLEFtX",
+                    "ref": "9156a4d7-c9d2-49e7-b750-f5798668eae8",
+                    "label": "Nigeria"
+                },
+                {
+                    "id": "GAPNTtryYBEa",
+                    "ref": "3b1cb7e7-fb17-49ab-b9fd-027a9b00ac20",
+                    "label": "South Africa"
+                },
+                {
+                    "id": "33ng4GIjU3zn",
+                    "ref": "cba4097c-472b-491f-908a-140210b4f6f2",
+                    "label": "Egypt"
+                },
+                {
+                    "id": "F1vnkcEUohHw",
+                    "ref": "447fe6bd-843a-4e08-ac96-8feafac8f1c6",
+                    "label": "Ghana"
+                },
+                {
+                    "id": "73lvw8hvK2BO",
+                    "ref": "25671ce2-bbc9-4bd1-828a-a0f7668199e0",
+                    "label": "Rwanda"
+                },
+                {
+                    "id": "cQEd6Q4nVaIP",
+                    "ref": "1a02b934-e864-41d6-a654-a78fd2b8a71a",
+                    "label": "Uganda"
+                },
+                {
+                    "id": "5CMyFhd0eNtQ",
+                    "ref": "1806a4f4-df83-4d9c-ab1c-24549b6b538c",
+                    "label": "Zambia"
+                },
+                {
+                    "id": "0POzAcdoSzu7",
+                    "ref": "0b2899eb-db33-4816-b059-8a1bf01f19e5",
+                    "label": "Tanzania"
+                },
+                {
+                    "id": "zzWXv0n9Zfef",
+                    "ref": "f4944ee8-46c6-49fb-8323-f2b6b821f0bc",
+                    "label": "Algeria"
+                },
+                {
+                    "id": "1vBHgOn3MPqI",
+                    "ref": "48a0803a-daa6-409b-8da9-3208539078bc",
+                    "label": "Angola"
+                },
+                {
+                    "id": "rlU1gAPYzthV",
+                    "ref": "7c1dec9d-3979-47f1-a915-f246f2edbcf9",
+                    "label": "Benin"
+                },
+                {
+                    "id": "FQc1evaCuDSL",
+                    "ref": "450448c4-5140-452a-85b3-427e68f95927",
+                    "label": "Botswana"
+                },
+                {
+                    "id": "dY6Xw9CTJEjV",
+                    "ref": "ad22e8d3-2604-4766-8ca3-4e3bd78f1bde",
+                    "label": "Burkina Faso"
+                },
+                {
+                    "id": "0XRYs9kZTQab",
+                    "ref": "0037755d-9eda-45cb-9159-a2b23285895e",
+                    "label": "Burundi"
+                },
+                {
+                    "id": "sxuobxGU2f84",
+                    "ref": "099073e0-c951-4d17-864c-e12ac59b5522",
+                    "label": "Cameroon"
+                },
+                {
+                    "id": "bkhA4Xuhi9hN",
+                    "ref": "b7b6f017-2373-4dd7-adcc-900a740c9d37",
+                    "label": "Central African Republic"
+                },
+                {
+                    "id": "Kc92wYNPJ0G9",
+                    "ref": "f8318a35-de9b-47fd-905a-362d0e08121a",
+                    "label": "Comoros"
+                },
+                {
+                    "id": "vroNQ2Motp9z",
+                    "ref": "4e853885-ffc7-4c9e-9cdb-3191ec849ee9",
+                    "label": "Democratic Republic of the Congo"
+                },
+                {
+                    "id": "qsq9xG7Ch9q1",
+                    "ref": "6e842dba-3182-4c5e-aa7f-93cea9db58a0",
+                    "label": "Ethiopia"
+                },
+                {
+                    "id": "z1zvOIQGnn0b",
+                    "ref": "089205fa-9180-4eff-9a64-377683c46f44",
+                    "label": "Gabon"
+                },
+                {
+                    "id": "39enOn9qWK2G",
+                    "ref": "43b536bd-111a-428f-a847-86597b817be8",
+                    "label": "Gambia"
+                },
+                {
+                    "id": "Dgt6VzmjLDVI",
+                    "ref": "c8f400c9-2921-4d87-9b49-c6e099f80627",
+                    "label": "Guinea"
+                },
+                {
+                    "id": "4PU4NWYgC9fN",
+                    "ref": "3337706d-8eb5-4842-a8ea-c264cc797aef",
+                    "label": "Ivory Coast"
+                },
+                {
+                    "id": "mTw0paNrRCiu",
+                    "ref": "b0d747c6-43ec-4e0a-8964-031ab2c8cb8b",
+                    "label": "Lesotho"
+                },
+                {
+                    "id": "bQo9y6ySR6Ec",
+                    "ref": "f17549ee-e744-4799-856a-ebb459572683",
+                    "label": "Liberia"
+                },
+                {
+                    "id": "L6N3YMnVK8tG",
+                    "ref": "a80b9af6-7b22-4546-90b8-73f4c73d5708",
+                    "label": "Madagascar"
+                },
+                {
+                    "id": "L43opFvtF5q0",
+                    "ref": "8f3f65b5-cc9d-44fc-b1d0-1f4a24e6fc2c",
+                    "label": "Malawi"
+                },
+                {
+                    "id": "p3nkg4aKv5nD",
+                    "ref": "ee55c270-59dd-41bc-974c-b19e1e74bd99",
+                    "label": "Mali"
+                },
+                {
+                    "id": "1xFGNvShqus9",
+                    "ref": "fc42757b-1a04-4edc-a958-89079b96dfc8",
+                    "label": "Mauritius"
+                },
+                {
+                    "id": "cFBFu1GSMSvJ",
+                    "ref": "ffce7a95-802e-457e-84da-a8f102b46697",
+                    "label": "Morocco"
+                },
+                {
+                    "id": "wBXBODnv11rP",
+                    "ref": "92dcf120-c9a4-4d98-9d25-93d98cfa84f2",
+                    "label": "Mozambique"
+                },
+                {
+                    "id": "PyIGSCugpTQx",
+                    "ref": "80983f38-c703-4548-b234-a2b1f9b4fb2a",
+                    "label": "Namibia"
+                },
+                {
+                    "id": "UaRhd7CatPxi",
+                    "ref": "c5cea2d7-f660-4fdb-8c54-0c0b86fc2e70",
+                    "label": "Niger"
+                },
+                {
+                    "id": "fxx1R8JPlbHO",
+                    "ref": "1cf60346-68a5-49d8-b797-d4cb7c327a9c",
+                    "label": "Republic of the Congo"
+                },
+                {
+                    "id": "iUUqDEo6dE4u",
+                    "ref": "c0b36546-6e9a-478c-b720-c49e355be39c",
+                    "label": "Senegal"
+                },
+                {
+                    "id": "jg7sIWOWiwDQ",
+                    "ref": "5db4117f-6cd7-4ca8-9a72-afb37bad2766",
+                    "label": "Seychelles"
+                },
+                {
+                    "id": "VBr49uKKdssp",
+                    "ref": "9ff1c002-ac43-4d7a-af7f-5078a9f6dd6f",
+                    "label": "South Sudan"
+                },
+                {
+                    "id": "I6wxxCrnaYzJ",
+                    "ref": "b19693b5-31c8-459c-b126-b82566c2b3f2",
+                    "label": "Sudan"
+                },
+                {
+                    "id": "2R6WrUBUmCed",
+                    "ref": "ed7e83dc-991a-4266-9cec-e56116581cc4",
+                    "label": "Tanzania"
+                },
+                {
+                    "id": "111wq9Tti2dN",
+                    "ref": "5d1744b4-a666-4ae1-a701-0212f16a2ce8",
+                    "label": "Togo"
+                },
+                {
+                    "id": "OZGYpQjLEZNQ",
+                    "ref": "4a886749-bacc-404c-9aa3-f8305ce703ee",
+                    "label": "Tunisia"
+                },
+                {
+                    "id": "IbyiBvxV9wkp",
+                    "ref": "2ee55384-6941-4e54-9405-cc8526e3d5bb",
+                    "label": "USA"
+                },
+                {
+                    "id": "3e1dijLmna73",
+                    "ref": "bd2942a2-f648-440b-870f-3de8d8dce8f2",
+                    "label": "Zimbabwe"
+                },
+                {
+                    "id": "KJuOnj9Gy6wX",
+                    "ref": "fafb98a7-cc57-4c99-80cd-009de44f2a69",
+                    "label": "Not listed"
+                }
+            ]
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "dropdown"
+    },
+    {
+        "id": "4xRkrwtR7jEc",
+        "title": "Is there a further license you have or intend getting? ",
+        "ref": "d716ad3d-1b89-4afe-843f-aaca6d711c1b",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "grTYdgveX1mt",
+        "title": "Give me the name or description of the third license you have or intend to get.",
+        "ref": "a52b637d-a038-4a2b-8b44-8702d814a705",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "o25EP2oxzA6X",
+        "title": "For what country?",
+        "ref": "81370ec6-6933-42aa-b49c-0bc69d9b75b2",
+        "properties": {
+            "randomize": false,
+            "alphabetical_order": false,
+            "choices": [
+                {
+                    "id": "JXDLjXkrZe6n",
+                    "ref": "022dfaf8-dfd3-47b1-b245-682fabab8e7e",
+                    "label": "Kenya"
+                },
+                {
+                    "id": "dCSXbHWuTV6P",
+                    "ref": "f5f84b89-2cd7-48dc-a9e8-a2265639b7eb",
+                    "label": "Nigeria"
+                },
+                {
+                    "id": "Z65LbonMJ5YM",
+                    "ref": "84ea2ffe-ec63-4368-bd04-d59f2dd67eaa",
+                    "label": "South Africa"
+                },
+                {
+                    "id": "fqoHaJTqv3Vg",
+                    "ref": "f00cec51-ed63-4c98-910a-93bbfaff8c37",
+                    "label": "Egypt"
+                },
+                {
+                    "id": "AbFfFT9xha6u",
+                    "ref": "c1e415f6-d5ff-4b6a-a9e9-f5c15a69ba10",
+                    "label": "Ghana"
+                },
+                {
+                    "id": "kN3L1d2TcWYK",
+                    "ref": "eba6d5ae-de44-474c-9c25-1bb322c58c6f",
+                    "label": "Rwanda"
+                },
+                {
+                    "id": "51X9cdCQhHcL",
+                    "ref": "406d9563-5d07-4cff-9d2c-fe93bddbe69d",
+                    "label": "Uganda"
+                },
+                {
+                    "id": "347hSggmF5Wx",
+                    "ref": "a3d116fd-3820-426f-b3b2-9062334ab108",
+                    "label": "Zambia"
+                },
+                {
+                    "id": "VpeEBI6e0z3L",
+                    "ref": "ff4dc3e7-9d4d-4a21-a993-75fa27613559",
+                    "label": "Tanzania"
+                },
+                {
+                    "id": "5UxeGlBL717c",
+                    "ref": "617528db-6201-4e42-81c6-bd5096a78e59",
+                    "label": "Algeria"
+                },
+                {
+                    "id": "XxgNCeTiwKaJ",
+                    "ref": "e80cb4e4-b4bf-4add-a961-83a2522e2a63",
+                    "label": "Angola"
+                },
+                {
+                    "id": "9o9JmjVW77UX",
+                    "ref": "04a1f2bb-5e22-4b85-b134-997da8c9f826",
+                    "label": "Benin"
+                },
+                {
+                    "id": "qMPultbm1K5K",
+                    "ref": "e23c0d50-43e7-4dd1-9660-f83a65b2f4ec",
+                    "label": "Botswana"
+                },
+                {
+                    "id": "DRfKlGyB8Olz",
+                    "ref": "0af64143-18dc-4400-b1a7-394366b0d9a8",
+                    "label": "Burkina Faso"
+                },
+                {
+                    "id": "SaHPQe1C6Dgs",
+                    "ref": "8d7c48e9-1540-4d2e-8bbf-1bcc36267164",
+                    "label": "Burundi"
+                },
+                {
+                    "id": "JPZkb03JO7KA",
+                    "ref": "aa76aef4-442b-4ed7-96cd-54e5e958a9cc",
+                    "label": "Cameroon"
+                },
+                {
+                    "id": "626KFPEHvW2X",
+                    "ref": "62fe5f24-0cd6-4291-941d-a3f99c98bc27",
+                    "label": "Central African Republic"
+                },
+                {
+                    "id": "m61PqEmeRymL",
+                    "ref": "0ace8fa9-6a5a-4ccb-81d0-a7a6a2497d83",
+                    "label": "Comoros"
+                },
+                {
+                    "id": "L3HIiGJimsX4",
+                    "ref": "4470581f-d3be-466e-8304-d9361eb6cf90",
+                    "label": "Democratic Republic of the Congo"
+                },
+                {
+                    "id": "FCqymLRFugmh",
+                    "ref": "d85f5dba-42a9-4f1d-aebe-691098394347",
+                    "label": "Ethiopia"
+                },
+                {
+                    "id": "Ej3g8TlvUOvj",
+                    "ref": "21bb5184-6de6-4973-9d39-983a27c3fcd8",
+                    "label": "Gabon"
+                },
+                {
+                    "id": "guoLAbJjqY1S",
+                    "ref": "f06e7fb6-cfb7-4687-9807-57956923420c",
+                    "label": "Gambia"
+                },
+                {
+                    "id": "Q6DhXXrEhRY1",
+                    "ref": "f5dd6083-8c31-4b43-8601-80db3a8138c9",
+                    "label": "Guinea"
+                },
+                {
+                    "id": "9nbRPgy4cgGW",
+                    "ref": "9cea89de-9e8b-41a1-a917-164afe633402",
+                    "label": "Ivory Coast"
+                },
+                {
+                    "id": "B6hRogTDMS2R",
+                    "ref": "e4e4f6c8-61ed-4ad7-a35e-a2712e232c73",
+                    "label": "Lesotho"
+                },
+                {
+                    "id": "MxTs2S6BCcSu",
+                    "ref": "98e5a507-a2fb-4433-bf6f-c7bed96f4e4b",
+                    "label": "Liberia"
+                },
+                {
+                    "id": "senUBgcXTlcU",
+                    "ref": "fb5b7602-f2e8-4b31-bf32-c54f5a483a39",
+                    "label": "Madagascar"
+                },
+                {
+                    "id": "JS2vIAiecZc0",
+                    "ref": "82ca9959-0069-49c8-94b8-d6a0b0b208bf",
+                    "label": "Malawi"
+                },
+                {
+                    "id": "R3lE3R6Wi75h",
+                    "ref": "0cf17db5-98d5-4186-92d8-208087388db5",
+                    "label": "Mali"
+                },
+                {
+                    "id": "T3Zqk6LwG0kR",
+                    "ref": "a50c9d0d-35c3-46a6-b50f-6c8c325fdd65",
+                    "label": "Mauritius"
+                },
+                {
+                    "id": "t9kK3VU4TCRK",
+                    "ref": "f2723857-4e4e-482f-a37d-926d58e4f790",
+                    "label": "Morocco"
+                },
+                {
+                    "id": "4Pxwc0X5AKa7",
+                    "ref": "b8f9cad1-170a-4054-91e2-fe700cfa0dc5",
+                    "label": "Mozambique"
+                },
+                {
+                    "id": "ZIOYHKqjF9Xv",
+                    "ref": "03352cd8-b755-42c4-ab8d-2444e00f6881",
+                    "label": "Namibia"
+                },
+                {
+                    "id": "vot7wutnI4EU",
+                    "ref": "f59d2b41-5a43-4047-a07c-c930441e1f64",
+                    "label": "Niger"
+                },
+                {
+                    "id": "1HnUkRBjornx",
+                    "ref": "e48266b7-f2b9-4d26-a809-cb20c3510077",
+                    "label": "Republic of the Congo"
+                },
+                {
+                    "id": "I78bD5ApNi9l",
+                    "ref": "6ba94577-8f16-47be-adf4-a009cacb5fd3",
+                    "label": "Senegal"
+                },
+                {
+                    "id": "UxarCyFaZsbS",
+                    "ref": "32b8df58-72e8-4a50-852a-aca6f7a7c6f5",
+                    "label": "Seychelles"
+                },
+                {
+                    "id": "XFE2VkXP0GJa",
+                    "ref": "fe0ce1a8-fecb-44ca-b8c0-657f1d66ab77",
+                    "label": "South Sudan"
+                },
+                {
+                    "id": "2QDOu5avf6GJ",
+                    "ref": "55c2f137-f3aa-4f3f-bc4d-d7632f8fc92b",
+                    "label": "Sudan"
+                },
+                {
+                    "id": "1MC2h2EExj2V",
+                    "ref": "3b8cb4a1-ee0e-42bd-8db3-8adc26930a3c",
+                    "label": "Tanzania"
+                },
+                {
+                    "id": "a7rVd1l0mIr7",
+                    "ref": "c34585c4-d232-47f8-bd62-1b00dc7eacde",
+                    "label": "Togo"
+                },
+                {
+                    "id": "6c5rvHLy06Yg",
+                    "ref": "6da3511b-58bd-4aee-82f3-dc1e71bb3443",
+                    "label": "Tunisia"
+                },
+                {
+                    "id": "uTbb5SdzEZxE",
+                    "ref": "a930fd9e-95c4-4567-b6bb-e15f30aa0c0c",
+                    "label": "USA"
+                },
+                {
+                    "id": "hvVPlh4hs461",
+                    "ref": "9e9c2589-e06f-4b31-9c21-f3c21ac7013d",
+                    "label": "Zimbabwe"
+                },
+                {
+                    "id": "vCFtzGN5o6X0",
+                    "ref": "5c72f8d7-d85a-448c-b683-c1b0d110b257",
+                    "label": "Not listed"
+                }
+            ]
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "dropdown"
+    },
+    {
+        "id": "eAwm17gMCSRr",
+        "title": "Give me the name or description of the regulation you need to comply with or intend to comply with?",
+        "ref": "1d9edf25-d293-45c3-8992-0c4428d8daa7",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "nencx5FcVpXG",
+        "title": "From which government department?",
+        "ref": "4d5cbde0-cdaa-451b-b836-25253dbcaf58",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "ehku9gvd0Wl8",
+        "title": "Is there a second regulation you need to comply with or intend to comply with?",
+        "ref": "608c32b4-3d4e-4745-98d6-34288a3e87a7",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "BlJblmeIO4ZF",
+        "title": "Give me the name or description of the regulation.",
+        "ref": "1e17798f-1c9b-4acb-ab89-3af9918aa10a",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "zNBHsxIm75dJ",
+        "title": "From which government department?",
+        "ref": "a55e522f-f54d-45ee-a660-3c63b6b4aac1",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "wiDr7y1d5JiA",
+        "title": "Is there a further regulation you need to comply with or intend to comply with?",
+        "ref": "d3e1aaef-02d7-4a8b-beaf-59cde62a1942",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "0f0uFTpkXsJj",
+        "title": "Give me the name or description of the third regulation.",
+        "ref": "d83827fc-948d-46f1-99c9-409b4ff93a58",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "TGddw5wA2fZn",
+        "title": "From which government department?",
+        "ref": "a086e4fd-0dbb-470a-8784-023720a83773",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "SXjBHQQnjdxW",
+        "title": "Okay, this is important to know. \n\nYou can download sector and regional specific cheat sheets from our website resources page but we strongly advise speaking with a qualified legal professional.\n\nJust for you, our legal partners will be more than happy to give you a free 30 minute consultation ",
+        "ref": "eb4623b5-f28d-4438-a1a0-1b7cf73ca189",
+        "properties": {
+            "randomize": false,
+            "allow_multiple_selection": false,
+            "allow_other_choice": false,
+            "vertical_alignment": true,
+            "choices": [
+                {
+                    "id": "ElqRgcB68xfl",
+                    "ref": "e0c72c0c-2b11-40bb-a1c4-9b64c58e2807",
+                    "label": "Great, can I book one now!"
+                },
+                {
+                    "id": "PX9fBxJbxZhW",
+                    "ref": "8fb58d23-0892-4f6a-9a44-7ac92de7aec8",
+                    "label": "Remind me later"
+                },
+                {
+                    "id": "8FeZm2yKByBP",
+                    "ref": "ecfb1167-1129-4a9e-8e22-07be00b258a3",
+                    "label": "No thanks"
+                }
+            ]
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "multiple_choice",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/rykfuGUnYT6E",
+            "properties": {
+                "description": "support"
+            }
+        },
+        "layout": {
+            "type": "split",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/rykfuGUnYT6E",
+                "properties": {
+                    "brightness": 0,
+                    "description": "support"
+                }
+            },
+            "placement": "right"
+        }
+    },
+    {
+        "id": "aNJYInTVXJvg",
+        "title": "That's Compliance done {{hidden:first_name}}, what I will be asking in the next section section is about your business & revenue model, product description, vison, key milestones and strengths & weaknesses.",
+        "ref": "72370c15-1fd2-4fc9-b13d-ff9973d04ba9",
+        "properties": {
+            "button_text": "Continue",
+            "hide_marks": true
+        },
+        "type": "statement",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/H7Mw4GY3RisG",
+            "properties": {
+                "description": "Magnifying Glass"
+            }
+        },
+        "layout": {
+            "type": "split",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/H7Mw4GY3RisG",
+                "properties": {
+                    "description": "Magnifying Glass"
+                }
+            },
+            "placement": "left"
+        }
+    },
+    {
+        "id": "JMbQrtrNsL1W",
+        "title": "What is {{hidden:company_name}}'s type of business model?",
+        "ref": "64a875ec-b3ca-48fc-b07f-062bb360b053",
+        "properties": {
+            "description": "Click all that apply",
+            "randomize": false,
+            "allow_multiple_selection": true,
+            "allow_other_choice": false,
+            "vertical_alignment": true,
+            "choices": [
+                {
+                    "id": "jS8vhIiOyLpN",
+                    "ref": "9c7f5542-782e-447e-b101-da5206c6a1ed",
+                    "label": "B2B"
+                },
+                {
+                    "id": "jLtIuL4Bx4v1",
+                    "ref": "a17efd01-d486-4321-8b14-4432a14beb89",
+                    "label": "B2C"
+                },
+                {
+                    "id": "DAs2CMYcUZJv",
+                    "ref": "29e35ee6-a25a-4386-85c6-c33fccd6282b",
+                    "label": "C2C"
+                },
+                {
+                    "id": "7esiJUMc51DA",
+                    "ref": "ecc0e9f0-046d-4fa9-ab61-9b4d6b567213",
+                    "label": "C2B"
+                },
+                {
+                    "id": "OTvB8cZGFIxD",
+                    "ref": "1fb91e13-3d81-40c7-9326-f0eb45e41e6e",
+                    "label": "Other"
+                }
+            ]
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "multiple_choice",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/uwwr9uy9pxGw",
+            "properties": {
+                "description": "b2b"
+            }
+        },
+        "layout": {
+            "type": "split",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/uwwr9uy9pxGw",
+                "properties": {
+                    "brightness": 0,
+                    "description": "b2b"
+                }
+            },
+            "placement": "left"
+        }
+    },
+    {
+        "id": "Isu33wtt624c",
+        "title": "As you selected 'Other' {{hidden:first_name}}, please tell me what type of business model your company has.",
+        "ref": "32e65269-a82d-461d-b72a-55b3f634da7d",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "pvR3o3Sn2LHb",
+        "title": "In a few sentences, describe {{hidden:company_name}}'s revenue model",
+        "ref": "75d06e47-6d75-42ca-a60c-c9c130ae77fa",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "long_text"
+    },
+    {
+        "id": "9F8LsZQPCFpG",
+        "title": "What is the business vision?",
+        "ref": "e6efa3af-eec4-46b4-b770-b6646f6c2f51",
+        "properties": {
+            "description": "i.e. how is the company going to grow and expand and make money? Where will it be in 3-5 years?"
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "long_text",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/JsV3vVSxbkvB",
+            "properties": {
+                "description": "Vision"
+            }
+        }
+    },
+    {
+        "id": "7Vowz0tvW2SX",
+        "title": "What key milestones has {{hidden:company_name}}  achieved to date?",
+        "ref": "7aed52b1-a603-4972-bcc9-1b245193234b",
+        "properties": {
+            "description": "I am looking for things like time to MVP, customers acquired in X time, cash flow positive after X months, anchor customer signed up, etc."
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "long_text",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/VvxBUrp6K2FM",
+            "properties": {
+                "description": "win"
+            }
+        },
+        "layout": {
+            "type": "split",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/VvxBUrp6K2FM",
+                "properties": {
+                    "brightness": 0,
+                    "description": "win"
+                }
+            },
+            "placement": "right"
+        }
+    },
+    {
+        "id": "LiHXfYCTd9oC",
+        "title": "What are {{hidden:company_name}}'s strengths?",
+        "ref": "4d0d3c88-6653-41fb-a896-ba90cdc8e0fb",
+        "properties": {
+            "description": "List a maximum 5 points.\n\nA strength can be location, team, first to market, experienced team, IP that is patented, "
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "long_text",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/53pMxyF4YhBW",
+            "properties": {
+                "description": "strong"
+            }
+        },
+        "layout": {
+            "type": "split",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/53pMxyF4YhBW",
+                "properties": {
+                    "brightness": 0,
+                    "description": "strong"
+                }
+            },
+            "placement": "right"
+        }
+    },
+    {
+        "id": "XGr0aNk2y0Xc",
+        "title": "What are {{hidden:company_name}}'s weaknesses?",
+        "ref": "f2ebdebd-ee4a-4d39-9a70-f5a4e4f32b8e",
+        "properties": {
+            "description": "List a maximum 5 points.\n\nA weakness is NOT a lack of people or finances. Weaknesses are things the management sees in their business that are a problem or not optimal that they can do something about given time and money. "
+        },
+        "validations": {
+            "required": true
+        },
+        "type": "long_text",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/6VquJA9LXpuB",
+            "properties": {
+                "description": "signal"
+            }
+        },
+        "layout": {
+            "type": "split",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/6VquJA9LXpuB",
+                "properties": {
+                    "brightness": 0,
+                    "description": "signal"
+                }
+            },
+            "placement": "left"
+        }
+    },
+    {
+        "id": "NVndiDfc0v0M",
+        "title": "OK, only the section on shareholding left to do {{hidden:first_name}}. ",
+        "ref": "46726ace-a053-4ad8-9da1-0f5ff7374499",
+        "properties": {
+            "button_text": "Continue",
+            "hide_marks": true
+        },
+        "type": "statement"
+    },
+    {
+        "id": "MUNkWUslZLvJ",
+        "title": "Is there a shareholder agreement in place?",
+        "ref": "58c3d08a-435d-4cf9-b10c-256c0e64d1c2",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "yes_no",
+        "attachment": {
+            "type": "image",
+            "href": "https://images.typeform.com/images/LGnHmXQUGm76",
+            "properties": {
+                "description": "agreement"
+            }
+        },
+        "layout": {
+            "type": "split",
+            "attachment": {
+                "type": "image",
+                "href": "https://images.typeform.com/images/LGnHmXQUGm76",
+                "properties": {
+                    "brightness": 0,
+                    "description": "agreement"
+                }
+            },
+            "placement": "right"
+        }
+    },
+    {
+        "id": "WZ3DCYXcXK5H",
+        "title": "List the shareholders and percentage of ownership in the following questions, starting with the highest percentage first.\n\nI have catered for up to 6 shareholders. Also include the Employee Stock Ownership Plan (ESOP) if this has been set up. ",
+        "ref": "fe0eb2eb-16b7-44e7-b6f3-d1ca64050efd",
+        "properties": {
+            "description": "State one owner per line please",
+            "button_text": "Continue",
+            "hide_marks": true
+        },
+        "type": "statement"
+    },
+    {
+        "id": "GTe4DbIb0JtR",
+        "title": "What is the shareholders name?",
+        "ref": "9886a3f1-4e10-4e43-be85-8699e388e90c",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "xEjBfQzx3ZXt",
+        "title": "What percentage of ownership does this shareholder have?",
+        "ref": "28209dee-ca67-47f1-9785-b796094ef133",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "number"
+    },
+    {
+        "id": "g1fwWVsU3vw5",
+        "title": "Is there a second shareholder?",
+        "ref": "50f60909-7cf7-4006-b219-8c44738f02ec",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "lUbZz7QHwcCF",
+        "title": "What is the second shareholders name?",
+        "ref": "96836058-af5c-4676-96d7-b3738d4af7c9",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "pLYDxG6mcVCz",
+        "title": "What percentage of ownership does this shareholder have?",
+        "ref": "29a6a9fd-3847-4fdb-8d83-fa445d01cbed",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "number"
+    },
+    {
+        "id": "QG5rdP7XcliB",
+        "title": "Is there another shareholder?",
+        "ref": "c7da25be-f487-499c-b06d-0f41b92679c7",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "LvkeM5snydcO",
+        "title": "What is the third shareholders name?",
+        "ref": "5366f192-009b-4630-ba2c-222eb005831c",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "pwiSKph6IvsS",
+        "title": "What percentage of ownership does this shareholder have?",
+        "ref": "42a57028-ae3c-400c-8d1c-e7be61deb01c",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "number"
+    },
+    {
+        "id": "Ro77LjGyRu7p",
+        "title": "Is there another shareholder?",
+        "ref": "307f7580-fe1c-44f1-b515-40cea43001ef",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "Ltc8tLwtirKq",
+        "title": "What is the fourth shareholders name?",
+        "ref": "8120fa17-c782-4214-b243-d8b73b6392f9",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "8lh4xWC4sqf7",
+        "title": "What percentage of ownership does this shareholder have?",
+        "ref": "62926ecd-ccd1-464e-bbe1-148ec905f31e",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "number"
+    },
+    {
+        "id": "fSc2MM6RiXrz",
+        "title": "Is there another shareholder?",
+        "ref": "560643a3-0567-40c9-8a9c-7f30952aa649",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "13YR964A6Zv6",
+        "title": "What is the fifth shareholders name?",
+        "ref": "9adc80fc-0c6a-43d3-ab97-21961d5f878b",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "lCMko5mW3x9m",
+        "title": "What percentage of ownership does this shareholder have?",
+        "ref": "a7ddbdf5-9f44-4c0d-bb42-a0d6394c7bb9",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "number"
+    },
+    {
+        "id": "pOD6yYqe5QNP",
+        "title": "Is there a sixth shareholder?",
+        "ref": "cfe92c8f-f203-499d-b091-76ed7fa79848",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "g5sj4qamoacd",
+        "title": "What is the sixth shareholders name?",
+        "ref": "2136a6f9-61ea-4d54-8c32-4332e6fc4578",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "8O9GkXx1uQo0",
+        "title": "What percentage of ownership does this shareholder have?",
+        "ref": "039e0978-ddfc-445a-b50a-63d8d94cbdcd",
+        "properties": {},
+        "validations": {
+            "required": false
+        },
+        "type": "number"
+    },
+    {
+        "id": "hx4KZcYqeHhq",
+        "title": "Do people who are no longer with the company have share options (vested or not)?",
+        "ref": "19e2a5f1-1d0d-4350-b7e8-bbee3c0c7f1a",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "yhKVTwzbIB9g",
+        "title": "Give me the first person's name and surname.",
+        "ref": "fbc17d73-c5ee-4a99-a94a-7f488c73d571",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "jjDlz2CorCvR",
+        "title": "What was their position or title?",
+        "ref": "a1cbd0f7-5851-4f35-8be3-05959ed8c26b",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "aLV0JGCUvwJ2",
+        "title": "How many shares or options does he/ she they have?",
+        "ref": "210bbf30-3151-4775-a63d-f41b1694245d",
+        "properties": {},
+        "validations": {
+            "required": true,
+            "min_value": 1
+        },
+        "type": "number"
+    },
+    {
+        "id": "qjQw3xqjMqrR",
+        "title": "Elaborate on how many shares or options have vested and when the remainder will have vested.",
+        "ref": "d4bc4454-cada-46d9-96de-07af132b90ae",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "long_text"
+    },
+    {
+        "id": "FsSXUUDsohoH",
+        "title": "Is there a second person with shares or options who is no longer with the company?",
+        "ref": "93972b0c-5fbc-4694-a219-9d5ccd4c010f",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "8Fgm9y2z8ROv",
+        "title": "Give me the second person's name and surname.",
+        "ref": "628f1960-da1d-4363-b375-f67b6e132ce3",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "rObP8blTc0x0",
+        "title": "What was their position or title?",
+        "ref": "edeec8ed-82f7-4c8c-9df1-98e66ec7593e",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "85BAc0WTX483",
+        "title": "How many shares or options does he/ she they have?",
+        "ref": "ca0e7ddb-d29c-45f4-93e2-d14dbccd938c",
+        "properties": {},
+        "validations": {
+            "required": true,
+            "min_value": 1
+        },
+        "type": "number"
+    },
+    {
+        "id": "fZ9nKtFfveJf",
+        "title": "Elaborate on how many shares or options have vested and when the remainder will have vested.",
+        "ref": "5ae32fa7-77e7-4311-bfcb-0995bfc2ee36",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "long_text"
+    },
+    {
+        "id": "346CbrY5mybG",
+        "title": "Is there a further person with shares or options who is no longer with the company?",
+        "ref": "cc91c670-1f99-406d-b79e-458ac121205d",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "yes_no"
+    },
+    {
+        "id": "Ornh9XcR6MR9",
+        "title": "Give me the third person's name and surname.",
+        "ref": "1ea444ee-cf56-4d9f-b91c-36af89a99a07",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "wzHMOBi75Ry7",
+        "title": "What was their position or title?",
+        "ref": "5a43a547-fdbc-4c8c-b003-bf5d9187758b",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "short_text"
+    },
+    {
+        "id": "z37PuIfgivaN",
+        "title": "How many shares or options does he/ she they have?",
+        "ref": "88fe0784-acc6-405e-a43a-7ff919c78721",
+        "properties": {},
+        "validations": {
+            "required": true,
+            "min_value": 1
+        },
+        "type": "number"
+    },
+    {
+        "id": "e4IBwMQCVLzr",
+        "title": "Elaborate on how many shares or options have vested and when the remainder will have vested.",
+        "ref": "268df9c3-9efd-41b1-89d4-04e975114d31",
+        "properties": {},
+        "validations": {
+            "required": true
+        },
+        "type": "long_text"
+    }
+]
