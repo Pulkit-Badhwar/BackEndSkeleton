@@ -1,5 +1,9 @@
 const createCompany = require('./createCompany');
+const fetchCompanyByCompanyID = require('./fetchCompanyByCompanyID');
+const fetchCompanyByEmail = require('./fetchCompanyByEmail');
 
 module.exports = {
-    createCompany
+    createCompany,
+    fetchCompanyByCompanyID,
+    fetchCompanyByEmail,
 };

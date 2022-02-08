@@ -3,7 +3,8 @@ const { createCompany } = require('../../../service/companyService');
 async function handler(req) {
 
     try {
-        let i = 0;
+        const personalEmail = req.headers.email;
+        console.log(personalEmail)
         const user = {
             // personal questions from here 
             firstName : req.body.answers.find(x => x.field.id === 'ZJqRU9iMbjCS').text,
@@ -71,7 +72,7 @@ async function handler(req) {
 
             Other : req.body.answers.find(x => x.field.id === 'PngOtVUlWZPK').text,
     }
-        const userData = await createCompany(user);
+        const userData = await createCompany(user, personalEmail);
         return userData;
     } catch (err) {
         throw err;

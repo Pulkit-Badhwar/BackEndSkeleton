@@ -35,7 +35,6 @@ async function handler(req) {
     if (req.body.email) {
         const email = req.body.email
         const data = await fetchUserByEmail(email);
-        console.log(data.code);
         sendEmail(email, data.code);
     }
 }
