@@ -21,9 +21,22 @@ function save(user,email) {
   }
 
 
-  function updateByEmail(user, email) {
+  // function updateByEmail(user, email) {
+  //   return new Promise((resolve, reject) => {
+  //     pool.query(`UPDATE public."Company" "firstName" = '${user.firstName}', "lasttName" = '${user.lastName}', "CompanyID" = '${user.CompanyID}', "Company_Name" = '${user.Company_Name}', "Country" = '${user.Country}', "Website" = '${user.Website}', "Registration_no" = '${user.Registration_no}', "LinkedinURL" = '${user.LinkedinURL}', "Year_Founded" = '${user.Year_Founded}', "Legal_Entity" = '${user.Legal_Entity}', "Other" = '${user.Other}', "Continent_ops" = '${user.Continent_ops}', "Expansion12Months" = '${user.Expansion12Months}', "Description" = '${user.Description}' WHERE email = '${email}'`, (err, result) => {
+  //       if (err) {
+  //         console.log('error');
+  //         reject(err);
+  //       }
+  //       resolve(result);
+  //     });
+  //   });
+  // }
+
+
+  function updateByEmail(user) {
     return new Promise((resolve, reject) => {
-      pool.query(`UPDATE public."Company" "firstName" = '${user.firstName}', "lasttName" = '${user.lastName}', "CompanyID" = '${user.CompanyID}', "Company_Name" = '${user.Company_Name}', "Country" = '${user.Country}', "Website" = '${user.Website}', "Registration_no" = '${user.Registration_no}', "LinkedinURL" = '${user.LinkedinURL}', "Year_Founded" = '${user.Year_Founded}', "Legal_Entity" = '${user.Legal_Entity}', "Other" = '${user.Other}', "Continent_ops" = '${user.Continent_ops}', "Expansion12Months" = '${user.Expansion12Months}', "Description" = '${user.Description}' WHERE email = '${email}'`, (err, result) => {
+      pool.query(`UPDATE public."Company" SET "Description" = '${user.Description}' WHERE email = '${user.email}'`, (err, result) => {
         if (err) {
           console.log('error');
           reject(err);
