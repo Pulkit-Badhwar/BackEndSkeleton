@@ -10,7 +10,7 @@ const pool = new Pool({
 
 function save(user,email) {
     return new Promise((resolve, reject) => {
-      pool.query('INSERT INTO  public."Company" ("firstName", "lastName", "CompanyID", "Company_Name", "Country", "Website", "Registration_no", "LinkedinURL", "Year_Founded", "Legal_Entity", "Other", "Continent_ops", "Expansion12Months", "Description", "email", "WebsiteURL" ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)', [user.firstName, user.lastName ,user.CompanyID, user.Company_Name, user.Country, user.Website, user.Registration_no, user.LinkedinURL, user.Year_Founded, user.Legal_Entity, user.Other, user.Continent_ops, user.Expansion12Months, user.Description, email, user.WebsiteURL ], (err, result) => {
+      pool.query('INSERT INTO  public."Company" ("firstName", "lastName", "CompanyID", "Company_Name", "Country", "Website", "Registration_no", "LinkedinURL", "Year_Founded", "Legal_Entity", "Other", "Continent_ops", "Expansion12Months", "Description", "email", "WebsiteURL" ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15, $16)', [user.firstName, user.lastName ,user.CompanyID, user.Company_Name, user.Country, user.Website, user.Registration_no, user.LinkedinURL, user.Year_Founded, user.Legal_Entity, user.Other, user.Continent_ops, user.Expansion12Months.label, user.Description, email, user.WebsiteURL ], (err, result) => {
         if (err) {
           console.log('error');
           reject(err);
