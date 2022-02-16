@@ -12,7 +12,7 @@ async function authorizeClientUser(email, password) {
       const token = generateToken(email);
       return { user, token };
     }
-    throw new Boom('Incorrect Password');
+    throw new Boom("That's not the right password. Try again");
   } catch (err) {
     throw err;
   }

@@ -26,7 +26,7 @@ const createFieldsArray = () => {
     fs.writeFileSync(__dirname + "/fields.json", JSON.stringify(finalArray));
     console.log("Totals Fields", finalArray.length, __dirname);
 }
-// createFieldsArray()
+createFieldsArray()
 
 // it will create mapping with id and attribute name
 const createMappingIdAttrinute = () => {
@@ -37,5 +37,5 @@ const createMappingIdAttrinute = () => {
 
     fs.writeFileSync(__dirname + "/finalFieldsMapping.json", JSON.stringify(finalObject));
 }
-  createMappingIdAttrinute()
+//   createMappingIdAttrinute()
 

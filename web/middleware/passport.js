@@ -49,29 +49,27 @@ passport.use(new Local({
     const reqPassword = req.body.password;
 
     const userData = fetchForEmail(reqEmail);
-
     userData.then(res => {
       if (res.isvalid == 'true') {
-    logger.info(`Passport.js :: email : ${reqEmail} :: password : ${reqPassword}`);
-    const authResult = authorizeClientUser(reqEmail, reqPassword);
-    authResult.then(({ user, token }) => {
-      logger.info(`Passport.js :: email :: ${reqEmail} :: token : ${token}`);
-      // const currentTime = Math.floor(Date.now() / 1000);
-      const userObj = {
-        email: user.email,
-        token,
-        tokenTimeStamp: Date.now(),
-      };
-      const value = JSON.stringify(userObj);
-      redis.set(token, value);
-      createClientTrackerHandler(userObj).then((data) => {
-        logger.info(`Create in ClientTracker:: ${JSON.stringify(data)}`);
-      }).catch((err) => logger.error(err));
-      callback(null, userObj);
-    }).catch((err) => callback(err));
+        logger.info(`Passport.js :: email : ${reqEmail} :: password : ${reqPassword}`);
+        const authResult = authorizeClientUser(reqEmail, reqPassword);
+        authResult.then(({ user, token }) => {
+          logger.info(`Passport.js :: email :: ${reqEmail} :: token : ${token}`);
+          const userObj = {
+            email: user.email,
+            token,
+            tokenTimeStamp: Date.now(),
+          };
+          const value = JSON.stringify(userObj);
+          redis.set(token, value);
+          createClientTrackerHandler(userObj).then((data) => {
+            logger.info(`Create in ClientTracker:: ${JSON.stringify(data)}`);
+          }).catch((err) => logger.error(err));
+          callback(null, userObj);
+        }).catch((err) => callback(err));
       }
-      else{
-        throw Boom.badRequest('email not verified');
+      else {
+        throw Boom.badRequest('Email not verified');
       }
     }).catch((err) => callback(err));
   } catch (err) {

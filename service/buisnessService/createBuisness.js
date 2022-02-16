@@ -1,9 +1,8 @@
-const { save } = require('../../repo/posgresSQL/companyRepo');
+const { save } = require('../../repo/posgresSQL/buisnessRepo');
 
 async function createBuisness(user) {
   try {
-    const data = 1
-    console.log(user);
+    const data = await save(user, CompanyID);
     return data;
   } catch (err) {
     throw err;
