@@ -3,32 +3,42 @@
     "id": "XuEuRrLKTqxa",
     "title": "Hi {{hidden:first_name}}, welcome back to module two of your company evaluation! \n\nTo allocate the this to the right company, please enter your Company ID. This number will be required at the beginning of every module to link the data to your personal profile.\n\nThe Company ID can be found in your Impact Rooms on the right hand side of your dashboard.",
     "ref": "cdde0fc7-8256-4a77-a67b-7a82e381950f",
-    "properties": { "description": "The number will look like CO123456" },
-    "validations": { "required": false },
+    "properties": {
+      "description": "The number will look like CO123456"
+    },
+    "validations": {
+      "required": false
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "CompanyID"
   },
   {
     "id": "ja6YfnDaT1dt",
     "title": "At Impact Rooms, it is important that the companies we support make a net positive impact on society and/or the environment. \n\nYou will complete a separate Impact report with our partner ImpactNexus after you finish this evaluation but a couple of questions from us first...",
     "ref": "cd46860b-d141-4e2c-bb59-0cdab7f2299d",
-    "properties": { "button_text": "Continue", "hide_marks": true },
+    "properties": {
+      "button_text": "Continue",
+      "hide_marks": true
+    },
     "type": "statement",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/KXgtktgPybxc",
-      "properties": { "description": "ImpactNexus_Logo_RGB-1-1024x187" }
+      "properties": {
+        "description": "ImpactNexus_Logo_RGB-1-1024x187"
+      }
     },
     "layout": {
       "type": "float",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/KXgtktgPybxc",
-        "properties": { "description": "ImpactNexus_Logo_RGB-1-1024x187" }
+        "properties": {
+          "description": "ImpactNexus_Logo_RGB-1-1024x187"
+        }
       },
       "placement": "left"
-    },
-    "dbAttributeName": null
+    }
   },
   {
     "id": "h3MZWNCqPzTg",
@@ -128,23 +138,29 @@
         }
       ]
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "multiple_choice",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/biuRaXkkFHUz",
-      "properties": { "description": "original-15" }
+      "properties": {
+        "description": "original-15"
+      }
     },
     "layout": {
       "type": "float",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/biuRaXkkFHUz",
-        "properties": { "description": "original-15" }
+        "properties": {
+          "description": "original-15"
+        }
       },
       "placement": "right"
     },
-    "dbAttributeName": null
+    "dbAttributeName": "SDGGoals"
   },
   {
     "id": "L8oVgqmegDtF",
@@ -178,32 +194,43 @@
         }
       ]
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "multiple_choice",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/2YQLTkDSdW5L",
-      "properties": { "description": "grow" }
+      "properties": {
+        "description": "grow"
+      }
     },
     "layout": {
       "type": "split",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/2YQLTkDSdW5L",
-        "properties": { "brightness": 0, "description": "grow" }
+        "properties": {
+          "brightness": 0,
+          "description": "grow"
+        }
       },
       "placement": "left"
     },
-    "dbAttributeName": null
+    "dbAttributeName": "SDG_Imp"
   },
   {
     "id": "xjJMXXWHr2p0",
     "title": "Do you have an impact vision?",
     "ref": "68f1ab27-40ec-418a-8ec5-34dadb1cb6be",
-    "properties": { "description": "You can copy and paste the vision here." },
-    "validations": { "required": false },
+    "properties": {
+      "description": "You can copy and paste the vision here."
+    },
+    "validations": {
+      "required": false
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "ImpactVision"
   },
   {
     "id": "38JUvMNPozmi",
@@ -212,23 +239,29 @@
     "properties": {
       "description": "e.g. to create sustainable income for 10,000 rural households "
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "long_text",
-    "dbAttributeName": null
+    "dbAttributeName": "ImpactVision_Desc"
   },
   {
     "id": "HVtT2vpPcl1m",
     "title": "Do you have a formal Impact and/or ESG strategy? ",
     "ref": "efc45076-38a7-48c8-937f-38848a2ec497",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "yes_no",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/Exggmvsqphn5",
-      "properties": { "description": "ecosystem" }
+      "properties": {
+        "description": "ecosystem"
+      }
     },
-    "dbAttributeName": null
+    "dbAttributeName": "Strategy"
   },
   {
     "id": "CryTWguRD9Wd",
@@ -237,14 +270,18 @@
     "properties": {
       "description": "This can be important if you are interested in Impact Investors "
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "yes_no",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/rTGWFmVPE8MP",
-      "properties": { "description": "sustain" }
+      "properties": {
+        "description": "sustain"
+      }
     },
-    "dbAttributeName": null
+    "dbAttributeName": "Help_Build_one"
   },
   {
     "id": "OS3ZLAIg2IGr",
@@ -268,9 +305,11 @@
         }
       ]
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "multiple_choice",
-    "dbAttributeName": null
+    "dbAttributeName": "CEO_Women"
   },
   {
     "id": "xub3EblfV63M",
@@ -309,18 +348,22 @@
         }
       ]
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "multiple_choice",
-    "dbAttributeName": null
+    "dbAttributeName": "NoOfWomen"
   },
   {
     "id": "U1OVpll7KvUg",
     "title": "Is your CEO and/or Founder(s) of African origin?",
     "ref": "563466dc-93bf-4abc-89bc-2763e179b122",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "CEO_Africa"
   },
   {
     "id": "6tcdKmbSPRxX",
@@ -359,9 +402,11 @@
         }
       ]
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "multiple_choice",
-    "dbAttributeName": null
+    "dbAttributeName": "NoOfAfrica"
   },
   {
     "id": "wWACfcIasKeD",
@@ -372,30 +417,36 @@
       "button_text": "Continue",
       "hide_marks": true
     },
-    "type": "statement",
-    "dbAttributeName": null
+    "type": "statement"
   },
   {
     "id": "rFsziTJDzVE6",
     "title": "It is not always the most enjoyable part of running a business but being compliant and abiding by the relevant regulations for your company is critical!\n\nLet's get this over with quickly {{hidden:first_name}}.",
     "ref": "8604838a-101b-453c-8af5-f5ea7efb3c6f",
-    "properties": { "button_text": "Continue", "hide_marks": true },
+    "properties": {
+      "button_text": "Continue",
+      "hide_marks": true
+    },
     "type": "statement",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/t8QGHmdsZZGn",
-      "properties": { "description": "scales" }
+      "properties": {
+        "description": "scales"
+      }
     },
     "layout": {
       "type": "split",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/t8QGHmdsZZGn",
-        "properties": { "brightness": 0, "description": "scales" }
+        "properties": {
+          "brightness": 0,
+          "description": "scales"
+        }
       },
       "placement": "left"
-    },
-    "dbAttributeName": null
+    }
   },
   {
     "id": "Fnee8RNIVDCN",
@@ -435,32 +486,41 @@
         }
       ]
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "multiple_choice",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/tM7j8C7DYfMg",
-      "properties": { "description": "Certificate" }
+      "properties": {
+        "description": "Certificate"
+      }
     },
     "layout": {
       "type": "split",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/tM7j8C7DYfMg",
-        "properties": { "brightness": 0, "description": "Certificate" }
+        "properties": {
+          "brightness": 0,
+          "description": "Certificate"
+        }
       },
       "placement": "right"
     },
-    "dbAttributeName": null
+    "dbAttributeName": "License_Regulation"
   },
   {
     "id": "c9lgRcVqLPnk",
     "title": "Give me the name or description of the license you have or intend to get.",
     "ref": "a9276f0a-d9e7-470a-9a88-7d49c2c85d2a",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "License_Desc"
   },
   {
     "id": "u2EdGnDU5xT9",
@@ -697,27 +757,33 @@
         }
       ]
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "dropdown",
-    "dbAttributeName": null
+    "dbAttributeName": "Country"
   },
   {
     "id": "o9hwc9W7CqAm",
     "title": "Is there a second license you have or intend getting? ",
     "ref": "b913e1d6-a2d9-49cf-a6c9-13c7ab8203a2",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "SecondLicense"
   },
   {
     "id": "s5IG6Lt8yOBb",
     "title": "Give me the name or description of the second license you have or intend to get.",
     "ref": "2290a014-3538-4618-86b4-9cc98048e1a0",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "SecondLicense_Desc"
   },
   {
     "id": "eTUdLtNZxRwE",
@@ -954,27 +1020,32 @@
         }
       ]
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "dropdown",
-    "dbAttributeName": null
+    "dbAttributeName": "SecondLicense_Country"
   },
   {
     "id": "4xRkrwtR7jEc",
     "title": "Is there a further license you have or intend getting? ",
     "ref": "d716ad3d-1b89-4afe-843f-aaca6d711c1b",
     "properties": {},
-    "validations": { "required": true },
-    "type": "yes_no",
-    "dbAttributeName": null
+    "validations": {
+      "required": true
+    },
+    "type": "yes_no"
   },
   {
     "id": "grTYdgveX1mt",
     "title": "Give me the name or description of the third license you have or intend to get.",
     "ref": "a52b637d-a038-4a2b-8b44-8702d814a705",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "ThirdLicense_Desc"
   },
   {
     "id": "o25EP2oxzA6X",
@@ -1211,81 +1282,97 @@
         }
       ]
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "dropdown",
-    "dbAttributeName": null
+    "dbAttributeName": "ThirdLicense_Country"
   },
   {
     "id": "eAwm17gMCSRr",
     "title": "Give me the name or description of the regulation you need to comply with or intend to comply with?",
     "ref": "1d9edf25-d293-45c3-8992-0c4428d8daa7",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "Desc_regulation"
   },
   {
     "id": "nencx5FcVpXG",
     "title": "From which government department?",
     "ref": "4d5cbde0-cdaa-451b-b836-25253dbcaf58",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "FromWhichGovtDepoartment_regulation"
   },
   {
     "id": "ehku9gvd0Wl8",
     "title": "Is there a second regulation you need to comply with or intend to comply with?",
     "ref": "608c32b4-3d4e-4745-98d6-34288a3e87a7",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "Second_regulation"
   },
   {
     "id": "BlJblmeIO4ZF",
     "title": "Give me the name or description of the regulation.",
     "ref": "1e17798f-1c9b-4acb-ab89-3af9918aa10a",
     "properties": {},
-    "validations": { "required": true },
-    "type": "short_text",
-    "dbAttributeName": null
+    "validations": {
+      "required": true
+    },
+    "type": "short_text"
   },
   {
     "id": "zNBHsxIm75dJ",
     "title": "From which government department?",
     "ref": "a55e522f-f54d-45ee-a660-3c63b6b4aac1",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "FromWhichGovtDepoartment_Secondregulation"
   },
   {
     "id": "wiDr7y1d5JiA",
     "title": "Is there a further regulation you need to comply with or intend to comply with?",
     "ref": "d3e1aaef-02d7-4a8b-beaf-59cde62a1942",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "Third_regulation"
   },
   {
     "id": "0f0uFTpkXsJj",
     "title": "Give me the name or description of the third regulation.",
     "ref": "d83827fc-948d-46f1-99c9-409b4ff93a58",
     "properties": {},
-    "validations": { "required": true },
-    "type": "short_text",
-    "dbAttributeName": null
+    "validations": {
+      "required": true
+    },
+    "type": "short_text"
   },
   {
     "id": "TGddw5wA2fZn",
     "title": "From which government department?",
     "ref": "a086e4fd-0dbb-470a-8784-023720a83773",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "FromWhichGovtDepoartment_Thirdregulation"
   },
   {
     "id": "SXjBHQQnjdxW",
@@ -1314,45 +1401,57 @@
         }
       ]
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "multiple_choice",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/rykfuGUnYT6E",
-      "properties": { "description": "support" }
+      "properties": {
+        "description": "support"
+      }
     },
     "layout": {
       "type": "split",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/rykfuGUnYT6E",
-        "properties": { "brightness": 0, "description": "support" }
+        "properties": {
+          "brightness": 0,
+          "description": "support"
+        }
       },
       "placement": "right"
-    },
-    "dbAttributeName": null
+    }
   },
   {
     "id": "aNJYInTVXJvg",
     "title": "That's Compliance done {{hidden:first_name}}, what I will be asking in the next section section is about your business & revenue model, product description, vison, key milestones and strengths & weaknesses.",
     "ref": "72370c15-1fd2-4fc9-b13d-ff9973d04ba9",
-    "properties": { "button_text": "Continue", "hide_marks": true },
+    "properties": {
+      "button_text": "Continue",
+      "hide_marks": true
+    },
     "type": "statement",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/H7Mw4GY3RisG",
-      "properties": { "description": "Magnifying Glass" }
+      "properties": {
+        "description": "Magnifying Glass"
+      }
     },
     "layout": {
       "type": "split",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/H7Mw4GY3RisG",
-        "properties": { "description": "Magnifying Glass" }
+        "properties": {
+          "description": "Magnifying Glass"
+        }
       },
       "placement": "left"
-    },
-    "dbAttributeName": null
+    }
   },
   {
     "id": "JMbQrtrNsL1W",
@@ -1392,41 +1491,52 @@
         }
       ]
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "multiple_choice",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/uwwr9uy9pxGw",
-      "properties": { "description": "b2b" }
+      "properties": {
+        "description": "b2b"
+      }
     },
     "layout": {
       "type": "split",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/uwwr9uy9pxGw",
-        "properties": { "brightness": 0, "description": "b2b" }
+        "properties": {
+          "brightness": 0,
+          "description": "b2b"
+        }
       },
       "placement": "left"
     },
-    "dbAttributeName": null
+    "dbAttributeName": "Buisness_model"
   },
   {
     "id": "Isu33wtt624c",
     "title": "As you selected 'Other' {{hidden:first_name}}, please tell me what type of business model your company has.",
     "ref": "32e65269-a82d-461d-b72a-55b3f634da7d",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "OtherBuisnessModel"
   },
   {
     "id": "pvR3o3Sn2LHb",
     "title": "In a few sentences, describe {{hidden:company_name}}'s revenue model",
     "ref": "75d06e47-6d75-42ca-a60c-c9c130ae77fa",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "long_text",
-    "dbAttributeName": null
+    "dbAttributeName": "Revenue_model"
   },
   {
     "id": "9F8LsZQPCFpG",
@@ -1435,14 +1545,17 @@
     "properties": {
       "description": "i.e. how is the company going to grow and expand and make money? Where will it be in 3-5 years?"
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "long_text",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/JsV3vVSxbkvB",
-      "properties": { "description": "Vision" }
-    },
-    "dbAttributeName": null
+      "properties": {
+        "description": "Vision"
+      }
+    }
   },
   {
     "id": "7Vowz0tvW2SX",
@@ -1451,23 +1564,29 @@
     "properties": {
       "description": "I am looking for things like time to MVP, customers acquired in X time, cash flow positive after X months, anchor customer signed up, etc."
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "long_text",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/VvxBUrp6K2FM",
-      "properties": { "description": "win" }
+      "properties": {
+        "description": "win"
+      }
     },
     "layout": {
       "type": "split",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/VvxBUrp6K2FM",
-        "properties": { "brightness": 0, "description": "win" }
+        "properties": {
+          "brightness": 0,
+          "description": "win"
+        }
       },
       "placement": "right"
-    },
-    "dbAttributeName": null
+    }
   },
   {
     "id": "LiHXfYCTd9oC",
@@ -1476,23 +1595,30 @@
     "properties": {
       "description": "List a maximum 5 points.\n\nA strength can be location, team, first to market, experienced team, IP that is patented, "
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "long_text",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/53pMxyF4YhBW",
-      "properties": { "description": "strong" }
+      "properties": {
+        "description": "strong"
+      }
     },
     "layout": {
       "type": "split",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/53pMxyF4YhBW",
-        "properties": { "brightness": 0, "description": "strong" }
+        "properties": {
+          "brightness": 0,
+          "description": "strong"
+        }
       },
       "placement": "right"
     },
-    "dbAttributeName": null
+    "dbAttributeName": "Strength_Type"
   },
   {
     "id": "XGr0aNk2y0Xc",
@@ -1501,54 +1627,70 @@
     "properties": {
       "description": "List a maximum 5 points.\n\nA weakness is NOT a lack of people or finances. Weaknesses are things the management sees in their business that are a problem or not optimal that they can do something about given time and money. "
     },
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "long_text",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/6VquJA9LXpuB",
-      "properties": { "description": "signal" }
+      "properties": {
+        "description": "signal"
+      }
     },
     "layout": {
       "type": "split",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/6VquJA9LXpuB",
-        "properties": { "brightness": 0, "description": "signal" }
+        "properties": {
+          "brightness": 0,
+          "description": "signal"
+        }
       },
       "placement": "left"
     },
-    "dbAttributeName": null
+    "dbAttributeName": "Weakness_Type"
   },
   {
     "id": "NVndiDfc0v0M",
     "title": "OK, only the section on shareholding left to do {{hidden:first_name}}. ",
     "ref": "46726ace-a053-4ad8-9da1-0f5ff7374499",
-    "properties": { "button_text": "Continue", "hide_marks": true },
-    "type": "statement",
-    "dbAttributeName": null
+    "properties": {
+      "button_text": "Continue",
+      "hide_marks": true
+    },
+    "type": "statement"
   },
   {
     "id": "MUNkWUslZLvJ",
     "title": "Is there a shareholder agreement in place?",
     "ref": "58c3d08a-435d-4cf9-b10c-256c0e64d1c2",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "yes_no",
     "attachment": {
       "type": "image",
       "href": "https://images.typeform.com/images/LGnHmXQUGm76",
-      "properties": { "description": "agreement" }
+      "properties": {
+        "description": "agreement"
+      }
     },
     "layout": {
       "type": "split",
       "attachment": {
         "type": "image",
         "href": "https://images.typeform.com/images/LGnHmXQUGm76",
-        "properties": { "brightness": 0, "description": "agreement" }
+        "properties": {
+          "brightness": 0,
+          "description": "agreement"
+        }
       },
       "placement": "right"
     },
-    "dbAttributeName": null
+    "dbAttributeName": "ShareHolderAgreement"
   },
   {
     "id": "WZ3DCYXcXK5H",
@@ -1559,295 +1701,354 @@
       "button_text": "Continue",
       "hide_marks": true
     },
-    "type": "statement",
-    "dbAttributeName": null
+    "type": "statement"
   },
   {
     "id": "GTe4DbIb0JtR",
     "title": "What is the shareholders name?",
     "ref": "9886a3f1-4e10-4e43-be85-8699e388e90c",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "ShareHolderName"
   },
   {
     "id": "xEjBfQzx3ZXt",
     "title": "What percentage of ownership does this shareholder have?",
     "ref": "28209dee-ca67-47f1-9785-b796094ef133",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "number",
-    "dbAttributeName": null
+    "dbAttributeName": "ShareHolderPercentage"
   },
   {
     "id": "g1fwWVsU3vw5",
     "title": "Is there a second shareholder?",
     "ref": "50f60909-7cf7-4006-b219-8c44738f02ec",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "SecondShareHolder"
   },
   {
     "id": "lUbZz7QHwcCF",
     "title": "What is the second shareholders name?",
     "ref": "96836058-af5c-4676-96d7-b3738d4af7c9",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "SecondShareHolderName"
   },
   {
     "id": "pLYDxG6mcVCz",
     "title": "What percentage of ownership does this shareholder have?",
     "ref": "29a6a9fd-3847-4fdb-8d83-fa445d01cbed",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "number",
-    "dbAttributeName": null
+    "dbAttributeName": "SecondShareHolderPercentage"
   },
   {
     "id": "QG5rdP7XcliB",
     "title": "Is there another shareholder?",
     "ref": "c7da25be-f487-499c-b06d-0f41b92679c7",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "ThirdShareHolder"
   },
   {
     "id": "LvkeM5snydcO",
     "title": "What is the third shareholders name?",
     "ref": "5366f192-009b-4630-ba2c-222eb005831c",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "ThirdShareHolderName"
   },
   {
     "id": "pwiSKph6IvsS",
     "title": "What percentage of ownership does this shareholder have?",
     "ref": "42a57028-ae3c-400c-8d1c-e7be61deb01c",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "number",
-    "dbAttributeName": null
+    "dbAttributeName": "ThirdShareHolderPercentage"
   },
   {
     "id": "Ro77LjGyRu7p",
     "title": "Is there another shareholder?",
     "ref": "307f7580-fe1c-44f1-b515-40cea43001ef",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "FourthdShareHolder"
   },
   {
     "id": "Ltc8tLwtirKq",
     "title": "What is the fourth shareholders name?",
     "ref": "8120fa17-c782-4214-b243-d8b73b6392f9",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "FourthShareHolderName"
   },
   {
     "id": "8lh4xWC4sqf7",
     "title": "What percentage of ownership does this shareholder have?",
     "ref": "62926ecd-ccd1-464e-bbe1-148ec905f31e",
     "properties": {},
-    "validations": { "required": false },
-    "type": "number",
-    "dbAttributeName": null
+    "validations": {
+      "required": false
+    },
+    "type": "number"
   },
   {
     "id": "fSc2MM6RiXrz",
     "title": "Is there another shareholder?",
     "ref": "560643a3-0567-40c9-8a9c-7f30952aa649",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "FifthdShareHolder"
   },
   {
     "id": "13YR964A6Zv6",
     "title": "What is the fifth shareholders name?",
     "ref": "9adc80fc-0c6a-43d3-ab97-21961d5f878b",
     "properties": {},
-    "validations": { "required": false },
-    "type": "short_text",
-    "dbAttributeName": null
+    "validations": {
+      "required": false
+    },
+    "type": "short_text"
   },
   {
     "id": "lCMko5mW3x9m",
     "title": "What percentage of ownership does this shareholder have?",
     "ref": "a7ddbdf5-9f44-4c0d-bb42-a0d6394c7bb9",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "number",
-    "dbAttributeName": null
+    "dbAttributeName": "FifthShareHolderPercentage"
   },
   {
     "id": "pOD6yYqe5QNP",
     "title": "Is there a sixth shareholder?",
     "ref": "cfe92c8f-f203-499d-b091-76ed7fa79848",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "SixthdShareHolder"
   },
   {
     "id": "g5sj4qamoacd",
     "title": "What is the sixth shareholders name?",
     "ref": "2136a6f9-61ea-4d54-8c32-4332e6fc4578",
     "properties": {},
-    "validations": { "required": false },
+    "validations": {
+      "required": false
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "SixthShareHolderName"
   },
   {
     "id": "8O9GkXx1uQo0",
     "title": "What percentage of ownership does this shareholder have?",
     "ref": "039e0978-ddfc-445a-b50a-63d8d94cbdcd",
     "properties": {},
-    "validations": { "required": false },
-    "type": "number",
-    "dbAttributeName": null
+    "validations": {
+      "required": false
+    },
+    "type": "number"
   },
   {
     "id": "hx4KZcYqeHhq",
     "title": "Do people who are no longer with the company have share options (vested or not)?",
     "ref": "19e2a5f1-1d0d-4350-b7e8-bbee3c0c7f1a",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "FirstExEmployeeSharesBool"
   },
   {
     "id": "yhKVTwzbIB9g",
     "title": "Give me the first person's name and surname.",
     "ref": "fbc17d73-c5ee-4a99-a94a-7f488c73d571",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "FirstExployeeName"
   },
   {
     "id": "jjDlz2CorCvR",
     "title": "What was their position or title?",
     "ref": "a1cbd0f7-5851-4f35-8be3-05959ed8c26b",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "FirstExEmployeePosition"
   },
   {
     "id": "aLV0JGCUvwJ2",
     "title": "How many shares or options does he/ she they have?",
     "ref": "210bbf30-3151-4775-a63d-f41b1694245d",
     "properties": {},
-    "validations": { "required": true, "min_value": 1 },
+    "validations": {
+      "required": true,
+      "min_value": 1
+    },
     "type": "number",
-    "dbAttributeName": null
+    "dbAttributeName": "FirstExEmployeeShares"
   },
   {
     "id": "qjQw3xqjMqrR",
     "title": "Elaborate on how many shares or options have vested and when the remainder will have vested.",
     "ref": "d4bc4454-cada-46d9-96de-07af132b90ae",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "long_text",
-    "dbAttributeName": null
+    "dbAttributeName": "ElaborateVestedShares"
   },
   {
     "id": "FsSXUUDsohoH",
     "title": "Is there a second person with shares or options who is no longer with the company?",
     "ref": "93972b0c-5fbc-4694-a219-9d5ccd4c010f",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "yes_no",
-    "dbAttributeName": null
+    "dbAttributeName": "SecondExEmployeeSharesBool"
   },
   {
     "id": "8Fgm9y2z8ROv",
     "title": "Give me the second person's name and surname.",
     "ref": "628f1960-da1d-4363-b375-f67b6e132ce3",
     "properties": {},
-    "validations": { "required": true },
-    "type": "short_text",
-    "dbAttributeName": null
+    "validations": {
+      "required": true
+    },
+    "type": "short_text"
   },
   {
     "id": "rObP8blTc0x0",
     "title": "What was their position or title?",
     "ref": "edeec8ed-82f7-4c8c-9df1-98e66ec7593e",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "SecondExEmployeePosition"
   },
   {
     "id": "85BAc0WTX483",
     "title": "How many shares or options does he/ she they have?",
     "ref": "ca0e7ddb-d29c-45f4-93e2-d14dbccd938c",
     "properties": {},
-    "validations": { "required": true, "min_value": 1 },
-    "type": "number",
-    "dbAttributeName": null
+    "validations": {
+      "required": true,
+      "min_value": 1
+    },
+    "type": "number"
   },
   {
     "id": "fZ9nKtFfveJf",
     "title": "Elaborate on how many shares or options have vested and when the remainder will have vested.",
     "ref": "5ae32fa7-77e7-4311-bfcb-0995bfc2ee36",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "long_text",
-    "dbAttributeName": null
+    "dbAttributeName": "ElaborateVestedShares2"
   },
   {
     "id": "346CbrY5mybG",
     "title": "Is there a further person with shares or options who is no longer with the company?",
     "ref": "cc91c670-1f99-406d-b79e-458ac121205d",
     "properties": {},
-    "validations": { "required": true },
-    "type": "yes_no",
-    "dbAttributeName": null
+    "validations": {
+      "required": true
+    },
+    "type": "yes_no"
   },
   {
     "id": "Ornh9XcR6MR9",
     "title": "Give me the third person's name and surname.",
     "ref": "1ea444ee-cf56-4d9f-b91c-36af89a99a07",
     "properties": {},
-    "validations": { "required": true },
-    "type": "short_text",
-    "dbAttributeName": null
+    "validations": {
+      "required": true
+    },
+    "type": "short_text"
   },
   {
     "id": "wzHMOBi75Ry7",
     "title": "What was their position or title?",
     "ref": "5a43a547-fdbc-4c8c-b003-bf5d9187758b",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "short_text",
-    "dbAttributeName": null
+    "dbAttributeName": "ThirdExEmployeePosition"
   },
   {
     "id": "z37PuIfgivaN",
     "title": "How many shares or options does he/ she they have?",
     "ref": "88fe0784-acc6-405e-a43a-7ff919c78721",
     "properties": {},
-    "validations": { "required": true, "min_value": 1 },
+    "validations": {
+      "required": true,
+      "min_value": 1
+    },
     "type": "number",
-    "dbAttributeName": null
+    "dbAttributeName": "ThirdExEmployeeShares"
   },
   {
     "id": "e4IBwMQCVLzr",
     "title": "Elaborate on how many shares or options have vested and when the remainder will have vested.",
     "ref": "268df9c3-9efd-41b1-89d4-04e975114d31",
     "properties": {},
-    "validations": { "required": true },
+    "validations": {
+      "required": true
+    },
     "type": "long_text",
-    "dbAttributeName": null
+    "dbAttributeName": "ElaborateVestedShares3"
   }
 ]

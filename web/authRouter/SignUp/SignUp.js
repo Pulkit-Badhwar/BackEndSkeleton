@@ -59,7 +59,9 @@ async function handler(req) {
     lastName: req.body.lastName || null,
     email: req.body.email || null,
     password: hash || null,
-    companyName: req.body.companyName || null,
+    mobile : req.body.mobile || null,
+    CompanyURL: req.body.CompanyURL || null,
+    CompanyID : req.body.CompanyID || null,
     uniqueString : uniqueString,
     isValid : 'false'
   };
