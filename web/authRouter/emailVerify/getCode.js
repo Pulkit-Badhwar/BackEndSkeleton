@@ -4,6 +4,7 @@ const { updateUserByCode } = require('../../../service/impactUserService');
 
 async function getCode(req,res){
     const  { uniqueString } = req.params;
+    console.log(uniqueString);
     const user = await fetchUserByCode(uniqueString);
     const data = {
         isValid : 'true',

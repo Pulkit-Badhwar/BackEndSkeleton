@@ -12,7 +12,6 @@ async function fetchUserByEmail(userEmail) {
     }
     const decrypted = decrypt(data.password);
     data.password = decrypted;
-    console.log(data);
     return data;
   } catch (err) {
     throw err;

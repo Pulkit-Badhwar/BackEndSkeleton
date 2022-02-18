@@ -1,6 +1,6 @@
 const { save } = require('../../repo/posgresSQL/organisationRepo');
 
-async function createOrganization(user, email) {
+async function createOrganisation(user, email) {
   try {
     const data = await save(user, email);
     return data;
@@ -9,4 +9,4 @@ async function createOrganization(user, email) {
   }
 }
 
-module.exports = createOrganization;
+module.exports = createOrganisation;

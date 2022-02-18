@@ -1,7 +1,7 @@
-const createOrganization = require('./createOrganization');
+const createOrganisation = require('./createOrganisation');
 const fetchOrganisationByEmail = require('./fetchOrganisationByEmail');
 
 module.exports = {
-    createOrganization,
+    createOrganisation,
     fetchOrganisationByEmail
 };

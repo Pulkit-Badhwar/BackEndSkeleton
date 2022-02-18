@@ -1,6 +1,8 @@
-const createOrganizationHandler = require('./createOrganizationHandler')
+const createOrganisationHandler = require('./createOrganisationHandler');
+const fetchOrganisationByEmailHandler = require('./fetchOrganisationByEmailHandler');
 
 
 module.exports = (router) => {
-  router.post('/organization/create', createOrganizationHandler);
+  router.post('/organisation/create', createOrganisationHandler);
+  router.get('/organisation/fetchByEmail', fetchOrganisationByEmailHandler);
 };

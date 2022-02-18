@@ -5,6 +5,7 @@ require('./authentication')(router);
 require('./emailVerify')(router);
 require('./fetchByEmail')(router);
 require('./forgotPassword')(router);
+require('./forgotUsername')(router);
 
 module.exports = (app) => {
   app.use('/auth', router);
