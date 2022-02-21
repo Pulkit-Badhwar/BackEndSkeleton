@@ -1,7 +1,7 @@
 const { fetchUserByCode } = require('../../../service/impactUserService');
 
 
-async function newPassword(req,res){
+async function verifyCodeForPassword(req,res){
     const  { uniqueString } = req.params;
     const user = await fetchUserByCode(uniqueString);
     if (user) {
@@ -12,4 +12,4 @@ async function newPassword(req,res){
     }
 }
 
-module.exports = newPassword;
+module.exports = verifyCodeForPassword;

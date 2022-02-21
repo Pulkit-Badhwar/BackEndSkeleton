@@ -2,7 +2,7 @@ const { fetchUserByCode } = require('../../../service/impactUserService');
 const { updateUserByCode } = require('../../../service/impactUserService');
 
 
-async function getCode(req,res){
+async function verifyCodeForEmail(req,res){
     const  { uniqueString } = req.params;
     console.log(uniqueString);
     const user = await fetchUserByCode(uniqueString);
@@ -19,4 +19,4 @@ async function getCode(req,res){
     }
 }
 
-module.exports = getCode;
+module.exports = verifyCodeForEmail;

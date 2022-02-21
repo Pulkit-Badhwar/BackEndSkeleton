@@ -16,7 +16,7 @@ const sendEmail = (email, uniqueString) => {
         from: sender,
         to: email,
         subject: "test email",
-        html: `Press <a href=http://localhost:8200/auth/forgot/${uniqueString}> here </a> to change Password`
+        html: `Press <a href=http://localhost:8200/auth/impact/verifyCodeForPassword/${uniqueString}> here </a> to change Password`
     };
 
 

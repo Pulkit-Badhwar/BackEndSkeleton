@@ -1,46 +1,47 @@
-const { createUser } = require('../../../service/impactUserService');
+const { createUser, fetchUserByUrl } = require('../../../service/impactUserService');
 const { isCharactersString, isEmailString, isPasswordString } = require('../../../service/validate/regexValidate');
-const { encrypt } = require('../../../service/crypto/crypto')
+const { encrypt } = require('../../../service/crypto/crypto');
 const nodemailer = require('nodemailer');
+const Boom = require('boom');
 
 const randString = () => {
   const len = 8;
   let randStr = ''
-  for(let i=0; i<len; i++){
+  for (let i = 0; i < len; i++) {
     const ch = Math.floor((Math.random() * 10) + 1);
     randStr += ch;
   }
   return randStr
 }
 
-const sendEmail = (email, uniqueString) =>{
+const sendEmail = (email, uniqueString) => {
   const Transport = nodemailer.createTransport({
     service: "Gmail",
-    auth:{
+    auth: {
       user: "pulkitgr892@gmail.com",
-      pass : "Silmarils2975"
+      pass: "Silmarils2975"
     }
   });
 
   var mailOptions;
   let sender = "Pulkit";
   mailOptions = {
-    from : sender,
+    from: sender,
     to: email,
     subject: "test email",
-    html: `Press <a href=http://localhost:8200/auth/verify/${uniqueString}> here </a> to verify`
+    html: `Press <a href=http://localhost:8200/auth/impact/verifyCodeForEmail/${uniqueString}> here </a> to verify`
   };
 
 
-  Transport.sendMail(mailOptions, function(err, res){
-    if(err){
+  Transport.sendMail(mailOptions, function (err, res) {
+    if (err) {
       console.log(err);
     }
-    else{
+    else {
       console.log('Message sent');
     }
   })
-  
+
 }
 
 async function handler(req) {
@@ -52,29 +53,37 @@ async function handler(req) {
   }
 
   const uniqueString = randString();
+  const CompanyURL = await fetchUserByUrl(req.body.CompanyURL);
+  console.log('CompanyURL Data', CompanyURL)
 
 
-  const user = {
-    firstName: req.body.firstName || null,
-    lastName: req.body.lastName || null,
-    email: req.body.email || null,
-    password: hash || null,
-    mobile : req.body.mobile || null,
-    CompanyURL: req.body.CompanyURL || null,
-    CompanyID : req.body.CompanyID || null,
-    uniqueString : uniqueString,
-    isValid : 'false'
-  };
-  const result = await createUser(user);
-
-  if(req.body.email){
-  sendEmail(req.body.email, uniqueString);
+  if (CompanyURL == null) {
+    const user = {
+      firstName: req.body.firstName || null,
+      lastName: req.body.lastName || null,
+      email: req.body.email || null,
+      password: hash || null,
+      mobile: req.body.mobile || null,
+      CompanyURL: req.body.CompanyURL || null,
+      CompanyID: req.body.CompanyID || null,
+      uniqueString: uniqueString,
+      isValid: 'false',
+      CompanyUrlAuth : 'true',
+      Primary : 'true',
+    };
+    const result = await createUser(user);
+    if (req.body.email) {
+      sendEmail(req.body.email, uniqueString);
+    }
+    return result;
+    // }
+    // else {
+    //   console.log('Data Invalid')
+    // }
   }
-  return result;
-  // }
-  // else {
-  //   console.log('Data Invalid')
-  // }
+  else {
+    throw Boom.badRequest('Company Url already in use');
+  }
 
 }
 
