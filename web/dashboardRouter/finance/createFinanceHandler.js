@@ -1,20 +1,20 @@
-const { createFunding } = require('../../../service/fundingService');
+const { createFinance } = require('../../../service/financeService');
 
 async function handler(req) {
     try {
         const email = req.headers.email;
         const user = {
-            FundingRound : req.body.answers[0].choice.label,
-            FundingAmount : req.body.answers[1].number,
+            FinanceRev : req.body.answers[0].boolean,
+            FinanceDate : req.body.answers[1].date,
         }
-        const userData = await createFunding(user, email);
+        const userData = await createFinance(user, email);
         return userData;
     } catch (err) {
         throw err;
     }
 }
 
-function createFundingHandler(req, res, next) {
+function createFinanceHandler(req, res, next) {
     handler(req).then((data) => {
         res.json({
             success: true,
@@ -23,4 +23,4 @@ function createFundingHandler(req, res, next) {
     }).catch((err) => next(err));
 }
 
-module.exports = createFundingHandler;
+module.exports = createFinanceHandler;

@@ -1,14 +1,13 @@
-const { createProductStage } = require('../../../service/productStageService');
+const { createProduct } = require('../../../service/productService');
 
 async function handler(req) {
     try {
+        const email = req.headers.email;
         const user = {
-            CompanyID : req.body.answers[0].text,
-            PreviousModules : req.body.answers[1].text,
-            
-
+            ProductDesc : req.body.answers[0].text,
+            ProductDate : req.body.answers[1].date,
         }
-        const userData = await createProductStage(user);
+        const userData = await createProduct(user, email);
         return userData;
     } catch (err) {
         throw err;

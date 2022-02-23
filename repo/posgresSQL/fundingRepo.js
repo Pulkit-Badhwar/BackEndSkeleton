@@ -14,8 +14,8 @@ function getRandomInt(max) {
 
 function save(user, email) {
   return new Promise((resolve, reject) => {
-    const ProductID = getRandomInt(100);
-    pool.query('INSERT INTO  public."Product" ("ProductID", "ProductDesc", "ProductDate", email ) VALUES ($1, $2, $3, $4)', [ProductID, user.ProductDesc, user.ProductDate, email], (err, result) => {
+    const FundingID = getRandomInt(100);
+    pool.query('INSERT INTO  public."Funding" ("FundingID", "FundingRound", "FundingAmount", email ) VALUES ($1, $2, $3, $4)', [FundingID, user.FundingRound, user.FundingAmount, email], (err, result) => {
       if (err) {
         console.log('error');
         reject(err);
@@ -29,7 +29,7 @@ function save(user, email) {
 
 function fetchByEmail(email) {
   return new Promise((resolve, reject) => {
-    const sql = `SELECT * FROM public."Product" WHERE "email" = '${email}'`;
+    const sql = `SELECT * FROM public."Funding" WHERE "email" = '${email}'`;
     pool.query(sql, (err, result) => {
       if (err) {
         console.log('error');

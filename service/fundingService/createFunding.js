@@ -1,9 +1,8 @@
-const { save } = require('../../repo/posgresSQL/companyRepo');
+const { save } = require('../../repo/posgresSQL/fundingRepo');
 
-async function createFunding(user) {
+async function createFunding(user, email) {
   try {
-    const data = 1
-    console.log(user);
+    const data = await save(user, email);
     return data;
   } catch (err) {
     throw err;
