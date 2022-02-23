@@ -1,17 +1,15 @@
 const multer = require('multer');
-const path = require('path');
-const Boom = require('boom');
 
 const storage = multer.diskStorage( {
   destination: function ( req, files, cb ) {
-      cb( null, path.resolve( `uploads` ) )
+      cb( null, '/Users/pulkitbadhwar/Desktop/work/MetaOrigin/ImpactRooms/impactBackend/uploads' )
   },
   filename: function ( req, file, cb ) {
-      cb( null, file.originalname )
+      cb( null, 'balanceSheet' )
   }
 
 } )
-const uploadConfig = multer({ storage, }).any();
+const uploadConfig = multer({ storage });
 
 
 module.exports = {

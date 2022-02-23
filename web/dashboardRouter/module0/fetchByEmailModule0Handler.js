@@ -1,16 +1,16 @@
-const { fetchProductByEmail } = require('../../../service/productService');
+const { fetchModule0ByEmail } = require('../../../service/module0Service');
 
 async function handler(req) {
   try {
     const email = req.query.email;
-    const userData = await fetchProductByEmail(email);
+    const userData = await fetchModule0ByEmail(email);
     return userData;
   } catch (err) {
     throw err;
   }
 }
 
-function fetchProductByEmailHandler(req, res, next) {
+function fetchModule0ByEmailHandler(req, res, next) {
   handler(req).then((data) => {
     res.json({
       success: true,
@@ -19,4 +19,4 @@ function fetchProductByEmailHandler(req, res, next) {
   }).catch((err) => next(err));
 }
 
-module.exports = fetchProductByEmailHandler;
+module.exports = fetchModule0ByEmailHandler;

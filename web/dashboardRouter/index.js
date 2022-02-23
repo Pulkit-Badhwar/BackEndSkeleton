@@ -11,6 +11,7 @@ require('./product')(router);
 require('./fileUpload')(router);
 require('./finance')(router);
 require('./impact')(router);
+require('./module0')(router);
 
 module.exports = (app) => {
   app.use('/api', router);
