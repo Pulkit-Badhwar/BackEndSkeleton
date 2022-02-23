@@ -8,7 +8,8 @@ require('./company')(router);
 require('./buisness')(router);
 require('./organization')(router);
 require('./funding')(router);
-require('./productStage')(router);
+require('./product')(router);
+require('./fileUpload')(router);
 
 module.exports = (app) => {
   app.use('/api', router);
