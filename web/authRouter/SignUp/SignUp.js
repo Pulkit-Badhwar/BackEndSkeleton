@@ -54,7 +54,6 @@ async function handler(req) {
 
   const uniqueString = randString();
   const CompanyURL = await fetchUserByUrl(req.body.CompanyURL);
-  console.log('CompanyURL Data', CompanyURL)
 
 
   if (CompanyURL == null) {
@@ -68,7 +67,7 @@ async function handler(req) {
       CompanyID: req.body.CompanyID || null,
       uniqueString: uniqueString,
       isValid: 'false',
-      CompanyUrlAuth : 'true',
+      CompanyURLAuth : 'true',
       Primary : 'true',
     };
     const result = await createUser(user);
