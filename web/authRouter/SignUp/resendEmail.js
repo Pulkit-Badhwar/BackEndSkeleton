@@ -10,14 +10,15 @@ const sendEmail = (email, uniqueString) => {
         }
     });
 
-    var mailOptions;
-    let sender = "Pulkit";
-    mailOptions = {
-        from: sender,
-        to: email,
-        subject: "test email",
-        html: `Press <a href=http://localhost:8200/auth/verify/${uniqueString}> here </a> to verify`
-    };
+    
+  var mailOptions;
+  let sender = "Pulkit";
+  mailOptions = {
+    from: sender,
+    to: email,
+    subject: "test email",
+    html: `Press <a href=http://localhost:8200/auth/impact/verifyCodeForEmail/${uniqueString}> here </a> to verify`
+  };
 
 
     Transport.sendMail(mailOptions, function (err, res) {
