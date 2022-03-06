@@ -1,4 +1,4 @@
-const { save } = require('../../repo/posgresSQL/resourceRepo');
+const { save } = require('../../repo/posgresSQL/resourcesRepo/resourceRepo');
 
 async function createResource(user, email) {
   try {

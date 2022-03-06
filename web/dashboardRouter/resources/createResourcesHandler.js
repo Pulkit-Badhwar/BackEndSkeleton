@@ -1,13 +1,19 @@
-
+const createResources = require('../../../service/resourceService/createResource');
+const moment = require('moment');
 
 async function handler(req) {
+    const currentDate = new Date(Date.now());
     try {
-        const email = req.headers.email;
+        const email = req.body.email;
         const user = {
-            FundingRound : req.body.answers[0].choice.label,
-            FundingAmount : req.body.answers[1].number,
+            author : req.body.author,
+            publishedDate : moment(currentDate, 'YYYY-MM-DD HH:mm:ss').toISOString().slice(0, 19).replace('T', ' '),
+            department : req.body.department,
+            subject : req.body.subject,
+            topic : req.body.topic,
+            description : req.body.description,
         }
-        // const userData = await createFunding(user, email);
+        const userData = await createResources(user, email);
         return userData;
     } catch (err) {
         throw err;
