@@ -1,4 +1,4 @@
-const { save } = require('../../../repo/posgresSQL/productRepo');
+const { save } = require('../../../repo/posgresSQL/profileRepo/productRepo');
 
 async function createProduct(user,email) {
   try {

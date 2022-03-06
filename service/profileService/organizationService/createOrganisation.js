@@ -1,4 +1,4 @@
-const { save } = require('../../../repo/posgresSQL/organisationRepo');
+const { save } = require('../../../repo/posgresSQL/profileRepo/organisationRepo');
 
 async function createOrganisation(user, email) {
   try {

@@ -1,4 +1,4 @@
-const { updateByEmail } = require('../../../repo/posgresSQL/companyRepo');
+const { updateByEmail } = require('../../../repo/posgresSQL/profileRepo/companyRepo');
 
 async function updateCompanyByEmail(user) {
   try {

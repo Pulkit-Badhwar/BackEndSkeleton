@@ -1,4 +1,4 @@
-const { save } = require('../../../repo/posgresSQL/impactRepo');
+const { save } = require('../../../repo/posgresSQL/profileRepo/impactRepo');
 
 async function createImpact(user,email) {
   try {

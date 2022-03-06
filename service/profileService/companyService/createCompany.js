@@ -1,4 +1,4 @@
-const { save } = require('../../../repo/posgresSQL/companyRepo');
+const { save } = require('../../../repo/posgresSQL/profileRepo/companyRepo');
 
 async function createCompany(user, email) {
   try {

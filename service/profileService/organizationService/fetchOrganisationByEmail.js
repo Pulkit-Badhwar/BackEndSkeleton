@@ -1,4 +1,4 @@
-const { fetchByEmail } = require('../../../repo/posgresSQL/organisationRepo');
+const { fetchByEmail } = require('../../../repo/posgresSQL/profileRepo/organisationRepo');
 
 async function fetchOrganisationByEmail(email) {
   try {

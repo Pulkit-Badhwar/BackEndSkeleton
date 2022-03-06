@@ -1,4 +1,4 @@
-const { save } = require('../../../repo/posgresSQL/fundingRepo');
+const { save } = require('../../../repo/posgresSQL/profileRepo/fundingRepo');
 
 async function createFunding(user, email) {
   try {
