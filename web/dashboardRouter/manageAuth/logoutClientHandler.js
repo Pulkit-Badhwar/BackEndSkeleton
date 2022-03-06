@@ -3,9 +3,9 @@ const { inActiveClientTracker } = rootRequire('service/clientTrackerService');
 
 async function handler(req) {
   try {
-    const { token } = req.user;
+    const token  = req.body.token;
     logger.info(`LogoutClientUser :: ${JSON.stringify(token)}`);
-    const result = redis.del([token], async (err, response) => {
+    const result = redis.del(token, async (err, response) => {
       if (response) {
         logger.info('LogoutClientHandler :: Logged Out successfully');
         await inActiveClientTracker(token);

@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-catch */
-const { updateByToken } = rootRequire('repo/mysql/clientTrackerRepo');
+const { updateByToken } = require('../../repo/posgresSQL/clientTrackerRepo')
 
 async function updateClientTracker(updateObject, clientToken) {
   try {

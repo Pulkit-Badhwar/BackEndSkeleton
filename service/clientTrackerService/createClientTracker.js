@@ -1,5 +1,5 @@
 /* eslint-disable no-useless-catch */
-const { save } = rootRequire('repo/mysql/clientTrackerRepo');
+const { save } = require('../../repo/posgresSQL/clientTrackerRepo')
 
 async function createClientTracker(clientObj) {
   try {

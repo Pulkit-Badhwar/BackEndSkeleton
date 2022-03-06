@@ -1,7 +1,6 @@
 const router = require('express').Router();
 
 require('./manageAuth')(router);
-require('./clientTracker')(router);
 require('./profile/company')(router);
 require('./profile/buisness')(router);
 require('./profile/organization')(router);

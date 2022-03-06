@@ -1,5 +1,4 @@
 const path = require('path');
-const mysqlCon = require('./config/mysqlConnection');
 const logger = require('./config/logger');
 const { redis } = require('./config/redis');
 
@@ -10,4 +9,3 @@ global.rootRequire = (name) => {
 
 global.logger = logger;
 global.redis = redis;
-global.mysqlCon = mysqlCon;
