@@ -4,8 +4,8 @@ const Local = require('passport-local');
 const config = require('nconf');
 const Boom = require('boom');
 
-const { authorizeClientUser } = rootRequire('service/authenticationService');
-const { createClientTracker } = rootRequire('service/clientTrackerService');
+const { authorizeClientUser } = require('../../service/AuthenticationService');
+const { createClientTracker } = require('../../service/clientTrackerService');
 const { fetchUserByEmail } = require('../../service/impactUserService');
 
 async function createClientTrackerHandler(userObj) {
