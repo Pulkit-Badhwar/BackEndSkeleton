@@ -1,5 +1,5 @@
 const { createUser, fetchUserByUrl } = require('../../../service/impactUserService');
-const { isCharactersString, isEmailString, isPasswordString } = require('../../../service/validate/regexValidate');
+const { findByEmail } = require('../../../repo/posgresSQL/userRepo')
 const { encrypt } = require('../../../service/crypto/crypto');
 const nodemailer = require('nodemailer');
 const Boom = require('boom');
@@ -47,16 +47,23 @@ const sendEmail = (email, uniqueString) => {
 async function handler(req) {
   let hash = null;
 
-  // if (isCharactersString(req.body.firstName) && isCharactersString(req.body.lastName) && isEmailString(req.body.email) && isCharactersString(req.body.companyName) && isPasswordString(req.body.password)) {
+
   if (req.body.password) {
     hash = encrypt(req.body.password);
   }
 
   const uniqueString = randString();
   const CompanyURL = await fetchUserByUrl(req.body.CompanyURL);
+  const CompanyEmail = await findByEmail(req.body.email);
 
+  if (CompanyURL !== undefined) {
+    throw Boom.badRequest('Company Url already in use');
+  }
+  else if (CompanyEmail !== undefined) {
+    throw Boom.badRequest('Email already registered');
 
-  if (CompanyURL == null) {
+  }
+  else {
     const user = {
       firstName: req.body.firstName || null,
       lastName: req.body.lastName || null,
@@ -67,22 +74,16 @@ async function handler(req) {
       CompanyID: req.body.CompanyID || null,
       uniqueString: uniqueString,
       isValid: 'false',
-      CompanyURLAuth : 'true',
-      Primary : 'true',
+      CompanyURLAuth: 'true',
+      Primary: 'true',
     };
     const result = await createUser(user);
     if (req.body.email) {
       sendEmail(req.body.email, uniqueString);
     }
     return result;
-    // }
-    // else {
-    //   console.log('Data Invalid')
-    // }
   }
-  else {
-    throw Boom.badRequest('Company Url already in use');
-  }
+
 
 }
 
