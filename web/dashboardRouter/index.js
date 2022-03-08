@@ -11,6 +11,7 @@ require('./profile/finance')(router);
 require('./profile/impact')(router);
 require('./module0')(router);
 require('./resources')(router);
+require('./token')(router);
 
 module.exports = (app) => {
   app.use('/api', router);
