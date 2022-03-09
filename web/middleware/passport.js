@@ -60,8 +60,8 @@ passport.use(new Local({
             token,
             tokenTimeStamp: Date.now(),
           };
-          const value = JSON.stringify(userObj);
-          redis.set(token, value);
+          // const value = JSON.stringify(userObj);  Redis functionality temp disabled
+          // redis.set(token, value);
           createClientTrackerHandler(userObj).then((data) => {
             logger.info(`Create in ClientTracker:: ${JSON.stringify(data)}`);
           }).catch((err) => logger.error(err));

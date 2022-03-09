@@ -19,7 +19,7 @@ const sendEmail = (email, uniqueString) => {
     service: "Gmail",
     auth: {
       user: "pulkitgr892@gmail.com",
-      pass: "Silmarils2975"
+      pass: "Istari2975"
     }
   });
 
