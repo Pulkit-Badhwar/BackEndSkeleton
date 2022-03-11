@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@typeform/api-client": "^1.7.0",
     "aws-sdk": "^2.1084.0",
     "boom": "^7.3.0",
     "cookie-parser": "^1.4.5",

@@ -1,13 +1,19 @@
-const { createModule0} = require('../../../service/module0Service');
+const { createModule0 } = require('../../../service/module0Service');
+const { createClient } = require('@typeform/api-client');
 
 async function handler(req) {
     try {
-        const email = req.headers.email;
-        const user = {
-            name : req.body.answers[0].text,
-        }
-        const userData = await createModule0(user, email);
-        return userData;
+        const typeformAPI = createClient({ token: 'tfp_DCtykcsnQaKyUDt6opWyyRtGgrZmD3o7fDge3ZuAXefP_3ss44PsKa18i1v' });
+
+        typeformAPI.forms.get({ uid: 'VwKdvBeF/responses?sort=submitted_at,desc' }).then(res => {
+            const user = {
+                name: res.items[0].answers[0].text,
+            }
+
+            const email = req.headers.email;
+            const userData = createModule0(user, email);
+            return userData;
+        })
     } catch (err) {
         throw err;
     }
