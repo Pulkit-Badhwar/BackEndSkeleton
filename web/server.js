@@ -24,7 +24,7 @@ function init() {
       logger.error(`Error while starting server at port ${config.get('PORT')} | Error: ${err.message}`);
     }
     logger.info(`Environment: ${config.get('NODE_ENV')}`);
-    logger.info(`Express Server Up and Running @PORT: ${config.get('PORT')} | at localhost`);
+    logger.info(`Express Server Up and Running @PORT: ${config.get('PORT')} `);
   });
 }
 
