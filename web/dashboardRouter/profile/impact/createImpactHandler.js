@@ -1,14 +1,21 @@
 const { createImpact } = require('../../../../service/profileService/impactService');
+const { createClient } = require('@typeform/api-client');
 
 async function handler(req) {
     try {
         const email = req.headers.email;
+
+        const typeformAPI = createClient({ token: 'tfp_DCtykcsnQaKyUDt6opWyyRtGgrZmD3o7fDge3ZuAXefP_3ss44PsKa18i1v' });
+
+        typeformAPI.forms.get({ uid: 'ICqRFBUl/responses?sort=submitted_at,desc' }).then(res => {
+
         const user = {
-            NoOfWomen : req.body.answers[0].number,
-            CEOWomen : req.body.answers[1].boolean,
+            NoOfWomen : res.items[0].answers[0].number,
+            CEOWomen : res.items[0].answers[1].boolean,
         }
-        const userData = await createImpact(user, email);
+        const userData = createImpact(user, email);
         return userData;
+    })
     } catch (err) {
         throw err;
     }
