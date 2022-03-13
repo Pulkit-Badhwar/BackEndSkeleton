@@ -12,7 +12,7 @@ async function verifyCodeForEmail(req,res){
     }
     if (user) {
         updateUserByCode(data);
-        res.redirect('http://dev-impact-rooms-web-elb-euw2-1787307.eu-west-2.elb.amazonaws.com/Verified');
+        res.redirect('https://dev.impactroomsdev.com/Verified');
     }
     else{
         console.log('error in finding user');
