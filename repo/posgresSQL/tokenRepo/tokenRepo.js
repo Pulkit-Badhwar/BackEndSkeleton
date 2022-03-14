@@ -30,7 +30,7 @@ function fetchByEmail(email) {
         console.log('error');
         reject(err);
       }
-      resolve(result.rows[0]);
+      resolve(result.rows);
     });
   });
 }
