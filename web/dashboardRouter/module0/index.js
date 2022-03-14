@@ -1,5 +1,5 @@
 const createModule0Handler = require('./createModule0Handler');
-const fetchModule0ByEmailHandler = require('./fetchByEmailModule0Handler');
+const fetchModule0ByEmailHandler = require('./fetchModule0ByEmailHandler');
 
 
 module.exports = (router) => {

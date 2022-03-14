@@ -30,7 +30,21 @@ function fetchByEmail(email) {
         console.log('error');
         reject(err);
       }
-      resolve(result.rows[0]);
+      resolve(result.rows);
+    });
+  });
+}
+
+
+function fetchByTopic(topic) {
+  return new Promise((resolve, reject) => {
+    const sql = `SELECT * FROM public."Resources" WHERE "topic" = '${topic}'`;
+    pool.query(sql, (err, result) => {
+      if (err) {
+        console.log('error');
+        reject(err);
+      }
+      resolve(result.rows);
     });
   });
 }
@@ -41,4 +55,5 @@ function fetchByEmail(email) {
 module.exports = {
   save,
   fetchByEmail,
+  fetchByTopic,
 }
