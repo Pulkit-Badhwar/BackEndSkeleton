@@ -17,7 +17,7 @@ async function handler(req) {
 
         const csv = new ObjectsToCsv([user])
 
-        await csv.toDisk(`/Users/pulkitbadhwar/Desktop/work/MetaOrigin/ImpactRooms/impactBackend/web/dashboardRouter/token/userTokenFiles/${user.tokenName+user.email}.csv`)
+        await csv.toDisk(`/Users/pulkitbadhwar/Desktop/work/MetaOrigin/ImpactRooms/impactBackend/web/dashboardRouter/token/userTokenFiles/${user.tokenName+user.email}.csv`);
 
         return userData;
     } catch (err) {
