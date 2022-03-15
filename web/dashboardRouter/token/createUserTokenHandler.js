@@ -1,15 +1,22 @@
 const { createUserToken } = require('../../../service/tokenService');
 const moment = require('moment');
+var fs = require('fs');
+const ObjectsToCsv = require('objects-to-csv');
 
 async function handler(req) {
     const currentDate = new Date(Date.now());
     try {
-        const email = req.body.email;
         const user = {
+            email : req.body.email,
             tokenName : req.body.tokenName,
             publishedDate : moment(currentDate, 'YYYY-MM-DD HH:mm:ss').toISOString().slice(0, 19).replace('T', ' '),
         }
-        const userData = await createUserToken(user, email);
+        const userData = await createUserToken(user);
+
+        const csv = new ObjectsToCsv([user])
+
+        await csv.toDisk(`/Users/pulkitbadhwar/Desktop/work/MetaOrigin/ImpactRooms/impactBackend/web/dashboardRouter/token/userTokenFiles/${user.tokenName+user.email}.csv`)
+
         return userData;
     } catch (err) {
         throw err;

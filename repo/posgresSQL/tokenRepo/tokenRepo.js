@@ -21,9 +21,9 @@ function save(user, email) {
 }
 
 
-function saveUser(user, email) {
+function saveUser(user) {
   return new Promise((resolve, reject) => {
-    pool.query('INSERT INTO  public."userToken" ("email", "tokenName", "publishedDate") VALUES ($1, $2, $3)', [email, user.tokenName, user.publishedDate], (err, result) => {
+    pool.query('INSERT INTO  public."userToken" ("email", "tokenName", "publishedDate") VALUES ($1, $2, $3)', [user.email, user.tokenName, user.publishedDate], (err, result) => {
       if (err) {
         console.log('error');
         reject(err);
