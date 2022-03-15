@@ -1,4 +1,4 @@
-const { createUserToken } = require('../../../service/tokenService');
+const { createUserToken, updateTokenByEmail } = require('../../../service/tokenService');
 const moment = require('moment');
 var fs = require('fs');
 const ObjectsToCsv = require('objects-to-csv');
@@ -10,8 +10,10 @@ async function handler(req) {
             email : req.body.email,
             tokenName : req.body.tokenName,
             publishedDate : moment(currentDate, 'YYYY-MM-DD HH:mm:ss').toISOString().slice(0, 19).replace('T', ' '),
+            claimed : "true"
         }
         const userData = await createUserToken(user);
+        updateTokenByEmail(user);
 
         const csv = new ObjectsToCsv([user])
 

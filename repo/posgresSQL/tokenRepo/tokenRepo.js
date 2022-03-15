@@ -48,6 +48,18 @@ function fetchByEmail(email) {
   });
 }
 
+function updateByEmail(user) {
+  return new Promise((resolve, reject) => {
+    pool.query(`UPDATE public."token" SET claimed = '${user.claimed}' WHERE email = '${user.email}'`, (err, result) => {
+      if (err) {
+        console.log('error');
+        reject(err);
+      }
+      resolve(result);
+    });
+  });
+}
+
 
 
 
@@ -55,4 +67,5 @@ module.exports = {
   save,
   saveUser,
   fetchByEmail,
+  updateByEmail,
 }
