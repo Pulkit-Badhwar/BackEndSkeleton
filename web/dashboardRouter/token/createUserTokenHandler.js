@@ -1,4 +1,4 @@
-const { createToken } = require('../../../service/tokenService');
+const { createUserToken } = require('../../../service/tokenService');
 const moment = require('moment');
 
 async function handler(req) {
@@ -8,16 +8,15 @@ async function handler(req) {
         const user = {
             tokenName : req.body.tokenName,
             publishedDate : moment(currentDate, 'YYYY-MM-DD HH:mm:ss').toISOString().slice(0, 19).replace('T', ' '),
-            claimed : 'false',
         }
-        const userData = await createToken(user, email);
+        const userData = await createUserToken(user, email);
         return userData;
     } catch (err) {
         throw err;
     }
 }
 
-function createTokenHandler(req, res, next) {
+function createUserTokenHandler(req, res, next) {
     handler(req).then((data) => {
         res.json({
             success: true,
@@ -26,4 +25,4 @@ function createTokenHandler(req, res, next) {
     }).catch((err) => next(err));
 }
 
-module.exports = createTokenHandler;
+module.exports = createUserTokenHandler;

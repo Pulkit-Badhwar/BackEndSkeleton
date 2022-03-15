@@ -10,7 +10,20 @@ const pool = new Pool({
 
 function save(user, email) {
   return new Promise((resolve, reject) => {
-    pool.query('INSERT INTO  public."token" ("tokenName", "publishedDate" , "email") VALUES ($1, $2, $3)', [user.tokenName, user.publishedDate, email], (err, result) => {
+    pool.query('INSERT INTO  public."token" ("tokenName", "publishedDate" , "email", "claimed") VALUES ($1, $2, $3, $4)', [user.tokenName, user.publishedDate, email, user.claimed], (err, result) => {
+      if (err) {
+        console.log('error');
+        reject(err);
+      }
+      resolve(result);
+    });
+  });
+}
+
+
+function saveUser(user, email) {
+  return new Promise((resolve, reject) => {
+    pool.query('INSERT INTO  public."userToken" ("email", "tokenName", "publishedDate") VALUES ($1, $2, $3)', [email, user.tokenName, user.publishedDate], (err, result) => {
       if (err) {
         console.log('error');
         reject(err);
@@ -40,5 +53,6 @@ function fetchByEmail(email) {
 
 module.exports = {
   save,
+  saveUser,
   fetchByEmail,
 }
