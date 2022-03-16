@@ -1,5 +1,6 @@
 const { fetchUserByEmail } = require('../../../service/impactUserService');
 const nodemailer = require('nodemailer');
+const Boom = require('boom');
 
 const sendEmail = (email, uniqueString) => {
     const Transport = nodemailer.createTransport({
@@ -35,7 +36,14 @@ async function handler(req) {
     if (req.body.email) {
         const email = req.body.email
         const data = await fetchUserByEmail(email);
-        sendEmail(email, data.code);
+        if (data.isvalid == 'false') {
+            throw Boom.badRequest('Email not verified');
+
+
+        }
+        else {
+            sendEmail(email, data.code);
+        }
     }
 }
 
