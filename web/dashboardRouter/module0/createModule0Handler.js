@@ -5,7 +5,7 @@ async function handler(req) {
     try {
         const typeformAPI = createClient({ token: 'tfp_5CHJLydFqtbBN5K9YXERJHUNGtGXYAdWHYHYLFDUc6Dv_3sv1WHvXUdTAfi' });
 
-        typeformAPI.forms.get({ uid: 'VwKdvBeF/responses?sort=submitted_at,desc' }).then(res => {
+        typeformAPI.forms.get({ uid: `VwKdvBeF/responses?sort=submitted_at,desc` }).then(res => {
             const user = {
                 name: res.items[0].answers[0].text,
             }

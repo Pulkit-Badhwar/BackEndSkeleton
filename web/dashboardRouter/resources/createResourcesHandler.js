@@ -1,4 +1,4 @@
-const { createResource, fetchResourcesByTopic } = require('../../../service/resourceService');
+const { createResource, fetchResourcesByTopic, fetchResourcesByEmail } = require('../../../service/resourceService');
 const moment = require('moment');
 const Boom = require('boom');
 
@@ -7,8 +7,8 @@ async function handler(req) {
     try {
         const email = req.body.email;
 
-        const data = await fetchResourcesByTopic(req.body.topic);
-        if(data.length == 0){
+        const data = await fetchResourcesByEmail(req.body.email);
+        if(data[0]?.topic != req.body.topic && data[1]?.topic != req.body.topic){
         const user = {
             author : req.body.author,
             publishedDate : moment(currentDate, 'YYYY-MM-DD HH:mm:ss').toISOString().slice(0, 19).replace('T', ' '),
