@@ -9,7 +9,7 @@ async function handler(req) {
         const users = {};
 
 
-        const typeformAPI = createClient({ token: 'tfp_5CHJLydFqtbBN5K9YXERJHUNGtGXYAdWHYHYLFDUc6Dv_3sv1WHvXUdTAfi' });
+        const typeformAPI = createClient({ token: 'tfp_GoVojE5Po2hRz35Qx9juYzQsPYWQ3ZvijRnMpP7ZXof_3soNTrhZzBzj1c' });
 
         typeformAPI.forms.get({ uid: 'rVmLTUdn/responses?sort=submitted_at,desc' }).then(res => {
 

@@ -9,7 +9,7 @@ async function handler(req) {
         const personalEmail = req.headers.email;
 
         const users = {};
-        const typeformAPI = createClient({ token: 'tfp_5CHJLydFqtbBN5K9YXERJHUNGtGXYAdWHYHYLFDUc6Dv_3sv1WHvXUdTAfi' });
+        const typeformAPI = createClient({ token: 'tfp_GoVojE5Po2hRz35Qx9juYzQsPYWQ3ZvijRnMpP7ZXof_3soNTrhZzBzj1c' });
 
         typeformAPI.forms.get({ uid: 'cvU9pW4r/responses?sort=submitted_at,desc' }).then(res => {
             res.items[0].answers.forEach(data => {
