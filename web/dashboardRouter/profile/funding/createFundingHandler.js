@@ -1,14 +1,23 @@
 const { createFunding } = require('../../../../service/profileService/fundingService');
+const { createClient } = require('@typeform/api-client');
 
 async function handler(req) {
     try {
         const email = req.headers.email;
+
+
+
+        const typeformAPI = createClient({ token: 'tfp_GoVojE5Po2hRz35Qx9juYzQsPYWQ3ZvijRnMpP7ZXof_3soNTrhZzBzj1c' });
+
+        typeformAPI.forms.get({ uid: 'hA2H25ai/responses?sort=submitted_at,desc' }).then(res => {
+
         const user = {
-            FundingRound : req.body.answers[0].choice.label,
-            FundingAmount : req.body.answers[1].number,
+            FundingRound : res.items[0].answers[0].choice.label,
+            FundingAmount : res.items[0].answers[1].number,
         }
-        const userData = await createFunding(user, email);
+        const userData = createFunding(user, email);
         return userData;
+    })
     } catch (err) {
         throw err;
     }

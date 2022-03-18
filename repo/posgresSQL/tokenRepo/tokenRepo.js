@@ -10,7 +10,20 @@ const pool = new Pool({
 
 function save(user, email) {
   return new Promise((resolve, reject) => {
-    pool.query('INSERT INTO  public."Resources" ("email", "author", "publishedDate","department", "subject", "topic", "description" ) VALUES ($1, $2, $3, $4, $5, $6, $7)', [email, user.author, user.publishedDate, user.department, user.subject, user.topic, user.description], (err, result) => {
+    pool.query('INSERT INTO  public."token" ("tokenName", "publishedDate" , "email", "claimed") VALUES ($1, $2, $3, $4)', [user.tokenName, user.publishedDate, email, user.claimed], (err, result) => {
+      if (err) {
+        console.log('error');
+        reject(err);
+      }
+      resolve(result);
+    });
+  });
+}
+
+
+function saveUser(user) {
+  return new Promise((resolve, reject) => {
+    pool.query('INSERT INTO  public."userToken" ("email", "tokenName", "publishedDate") VALUES ($1, $2, $3)', [user.email, user.tokenName, user.publishedDate], (err, result) => {
       if (err) {
         console.log('error');
         reject(err);
@@ -24,7 +37,7 @@ function save(user, email) {
 
 function fetchByEmail(email) {
   return new Promise((resolve, reject) => {
-    const sql = `SELECT * FROM public."Resources" WHERE "email" = '${email}'`;
+    const sql = `SELECT * FROM public."token" WHERE "email" = '${email}'`;
     pool.query(sql, (err, result) => {
       if (err) {
         console.log('error');
@@ -35,16 +48,14 @@ function fetchByEmail(email) {
   });
 }
 
-
-function fetchByTopic(topic) {
+function updateByEmail(user) {
   return new Promise((resolve, reject) => {
-    const sql = `SELECT * FROM public."Resources" WHERE "topic" = '${topic}'`;
-    pool.query(sql, (err, result) => {
+    pool.query(`UPDATE public."token" SET claimed = '${user.claimed}' WHERE email = '${user.email}'`, (err, result) => {
       if (err) {
         console.log('error');
         reject(err);
       }
-      resolve(result.rows);
+      resolve(result);
     });
   });
 }
@@ -54,6 +65,7 @@ function fetchByTopic(topic) {
 
 module.exports = {
   save,
+  saveUser,
   fetchByEmail,
-  fetchByTopic,
+  updateByEmail,
 }

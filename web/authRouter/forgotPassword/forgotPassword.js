@@ -1,12 +1,13 @@
 const { fetchUserByEmail } = require('../../../service/impactUserService');
 const nodemailer = require('nodemailer');
+const Boom = require('boom');
 
 const sendEmail = (email, uniqueString) => {
     const Transport = nodemailer.createTransport({
         service: "Gmail",
         auth: {
             user: "pulkitgr892@gmail.com",
-            pass: "Silmarils2975"
+            pass: "Istari2975"
         }
     });
 
@@ -16,7 +17,7 @@ const sendEmail = (email, uniqueString) => {
         from: sender,
         to: email,
         subject: "test email",
-        html: `Press <a href=http://localhost:8200/auth/impact/verifyCodeForPassword/${uniqueString}> here </a> to change Password`
+        html: `Press <a href=http://backend-alb-996875402.eu-west-2.elb.amazonaws.com/auth/impact/verifyCodeForPassword/${uniqueString}> here </a> to change Password`
     };
 
 
@@ -35,7 +36,14 @@ async function handler(req) {
     if (req.body.email) {
         const email = req.body.email
         const data = await fetchUserByEmail(email);
-        sendEmail(email, data.code);
+        if (data.isvalid == 'false') {
+            throw Boom.badRequest('Email not verified');
+
+
+        }
+        else {
+            sendEmail(email, data.code);
+        }
     }
 }
 

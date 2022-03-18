@@ -1,6 +1,6 @@
 const path = require('path');
 const logger = require('./config/logger');
-const { redis } = require('./config/redis');
+// const { redis } = require('./config/redis');
 
 global.rootRequire = (name) => {
   const module = require(path.join(__dirname, name)); // eslint-disable-line
@@ -8,4 +8,4 @@ global.rootRequire = (name) => {
 };
 
 global.logger = logger;
-global.redis = redis;
+// global.redis = redis;

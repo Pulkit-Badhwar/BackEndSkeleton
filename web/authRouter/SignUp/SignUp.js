@@ -19,7 +19,7 @@ const sendEmail = (email, uniqueString) => {
     service: "Gmail",
     auth: {
       user: "pulkitgr892@gmail.com",
-      pass: "Silmarils2975"
+      pass: "Istari2975"
     }
   });
 
@@ -29,7 +29,7 @@ const sendEmail = (email, uniqueString) => {
     from: sender,
     to: email,
     subject: "test email",
-    html: `Press <a href=http://localhost:8200/auth/impact/verifyCodeForEmail/${uniqueString}> here </a> to verify`
+    html: `Press <a href=http://backend-alb-996875402.eu-west-2.elb.amazonaws.com/auth/impact/verifyCodeForEmail/${uniqueString}> here </a> to verify`
   };
 
 

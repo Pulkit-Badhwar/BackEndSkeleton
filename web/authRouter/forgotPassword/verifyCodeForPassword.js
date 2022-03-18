@@ -5,7 +5,7 @@ async function verifyCodeForPassword(req,res){
     const  { uniqueString } = req.params;
     const user = await fetchUserByCode(uniqueString);
     if (user) {
-        res.redirect('http://localhost:3100/NewPass')
+        res.redirect('https://dev.impactroomsdev.com/NewPass')
     }
     else{
         console.log('error in finding user');

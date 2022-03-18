@@ -12,7 +12,7 @@ async function verifyCodeForEmail(req,res){
     }
     if (user) {
         updateUserByCode(data);
-        res.redirect('http://localhost:3100/Verified');
+        res.redirect('https://dev.impactroomsdev.com/Verified');
     }
     else{
         console.log('error in finding user');

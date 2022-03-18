@@ -5,6 +5,7 @@ require('./authentication')(router);
 require('./fetchByEmail')(router);
 require('./forgotPassword')(router);
 require('./forgotUsername')(router);
+require('./linkedInLogin')(router);
 
 module.exports = (app) => {
   app.use('/auth', router);
