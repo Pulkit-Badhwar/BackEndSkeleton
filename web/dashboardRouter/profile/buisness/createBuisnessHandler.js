@@ -1,15 +1,19 @@
 const { createBuisness } = require('../../../../service/profileService/buisnessService');
 const buisnessMapping = require('../../../dashboardRouter/profile/constant/buisnessmapping.json');
 const { createClient } = require('@typeform/api-client');
+const nconf = require('nconf');
 
 async function handler(req) {
     try {
+        nconf.env();
+        const typeformToken = nconf.get('TYPEFORM_TOKEN');
+
 
         const email = req.headers.email;
         const users = {};
 
 
-        const typeformAPI = createClient({ token: 'tfp_GoVojE5Po2hRz35Qx9juYzQsPYWQ3ZvijRnMpP7ZXof_3soNTrhZzBzj1c' });
+        const typeformAPI = createClient({ token: typeformToken });
 
         typeformAPI.forms.get({ uid: 'rVmLTUdn/responses?sort=submitted_at,desc' }).then(res => {
 

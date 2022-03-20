@@ -1,11 +1,14 @@
 const { createFinance } = require('../../../../service/profileService/financeService');
 const { createClient } = require('@typeform/api-client');
+const nconf = require('nconf');
 
 async function handler(req) {
     try {
+        nconf.env();
+        const typeformToken = nconf.get('TYPEFORM_TOKEN');
         const email = req.headers.email;
 
-        const typeformAPI = createClient({ token: 'tfp_GoVojE5Po2hRz35Qx9juYzQsPYWQ3ZvijRnMpP7ZXof_3soNTrhZzBzj1c' });
+        const typeformAPI = createClient({ token: typeformToken });
 
         typeformAPI.forms.get({ uid: 'jBXZncO7/responses?sort=submitted_at,desc' }).then(res => {
 

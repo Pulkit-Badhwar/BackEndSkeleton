@@ -1,9 +1,14 @@
 const { createModule0 } = require('../../../service/module0Service');
 const { createClient } = require('@typeform/api-client');
+const nconf = require('nconf');
+
+
 
 async function handler(req) {
     try {
-        const typeformAPI = createClient({ token: 'tfp_GoVojE5Po2hRz35Qx9juYzQsPYWQ3ZvijRnMpP7ZXof_3soNTrhZzBzj1c' });
+        nconf.env();
+        const typeformToken = nconf.get('TYPEFORM_TOKEN');
+        const typeformAPI = createClient({ token: typeformToken });
 
         typeformAPI.forms.get({ uid: `VwKdvBeF/responses?sort=submitted_at,desc` }).then(res => {
             const user = {
