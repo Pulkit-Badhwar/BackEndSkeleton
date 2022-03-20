@@ -11,7 +11,7 @@ const pool = new Pool({
 
 function save(user, email) {
   return new Promise((resolve, reject) => {
-    pool.query('INSERT INTO  public."module0" (name, email) VALUES ($1, $2)', [user.name, email], (err, result) => {
+    pool.query('INSERT INTO  public."popUp" (email, "Year_Founded", "Country_Headquarters", "Sector", "Product_Type", "Funding_Stage") VALUES ($1, $2, $3, $4, $5, $6)', [email, user.Year_Founded, user.Country_Headquarters, user.Sector, user.Product_Type, user.Funding_Stage], (err, result) => {
       if (err) {
         console.log('error');
         reject(err);
@@ -25,7 +25,7 @@ function save(user, email) {
 
 function fetchByEmail(email) {
   return new Promise((resolve, reject) => {
-    const sql = `SELECT * FROM public."module0" WHERE "email" = '${email}'`;
+    const sql = `SELECT * FROM public."popUp" WHERE "email" = '${email}'`;
     pool.query(sql, (err, result) => {
       if (err) {
         console.log('error');

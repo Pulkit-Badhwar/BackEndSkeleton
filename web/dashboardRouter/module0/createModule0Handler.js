@@ -10,9 +10,13 @@ async function handler(req) {
         const typeformToken = nconf.get('TYPEFORM_TOKEN');
         const typeformAPI = createClient({ token: typeformToken });
 
-        typeformAPI.forms.get({ uid: `VwKdvBeF/responses?sort=submitted_at,desc` }).then(res => {
+        typeformAPI.forms.get({ uid: `p6nWVJRx/responses?sort=submitted_at,desc` }).then(res => {
             const user = {
-                name: res.items[0].answers[0].text,
+                Year_Founded : res.items[0].answers.find(x => x.field.id === 'xPkAk0YvXf7J').date,
+                Country_Headquarters : res.items[0].answers.find(x => x.field.id === 'TybfK5rOWsGM').text,
+                Sector: res.items[0].answers.find(x => x.field.id === '2Mt3Wofsz2Eb').text,
+                Product_Type: res.items[0].answers.find(x => x.field.id === 'txaU12ZDjspA').choice.label,
+                Funding_Stage: res.items[0].answers.find(x => x.field.id === 'oYkX0Ryox0uP').choice.label, 
             }
 
             const email = req.headers.email;
