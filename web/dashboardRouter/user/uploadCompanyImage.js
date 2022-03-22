@@ -6,16 +6,18 @@ const Boom = require('boom');
 async function uploadCompanyImage(req, res, next) {
     const currentDate = new Date(Date.now());
 
+    const result = await uploadFile(req.file);
+
     const user = {
         fileName : req.file.originalname,
         email : req.headers.email,
         publishedDate : moment(currentDate, 'YYYY-MM-DD HH:mm:ss').toISOString().slice(0, 19).replace('T', ' '),
-        // s3key: s3Response[0].s3key,
-        // etag: s3Response[0].eTag,
-        // bucketName: s3Response[0].bucket,
+        s3key: result.Key,
+        etag: result.ETag,
+        bucketName: result.Bucket,
     }
-    const result = await saveCompanyImage(user);
-    return result;
+    const userDate = await saveCompanyImage(user);
+    return userDate;
 }
 
 module.exports = uploadCompanyImage;
