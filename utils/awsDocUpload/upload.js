@@ -23,4 +23,7 @@ const uploadFile = () => {
   });
 };
 
-uploadFile();
+
+module.exports = {
+    uploadFile
+}

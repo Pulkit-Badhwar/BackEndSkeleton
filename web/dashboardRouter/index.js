@@ -13,6 +13,7 @@ require('./module0')(router);
 require('./resources')(router);
 require('./token')(router);
 require('./test')(router);
+require('./user')(router);
 
 module.exports = (app) => {
   app.use('/api', router);
