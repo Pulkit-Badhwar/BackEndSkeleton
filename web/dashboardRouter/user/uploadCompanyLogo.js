@@ -1,11 +1,11 @@
-const saveCompanyImage = require('../../../service/impactUserService/saveCompanyImage');
+const saveCompanyLogo = require('../../../service/impactUserService/saveCompanyLogo');
 const { uploadFile } = require('../../../utils/s3Utils');
 const moment = require('moment');
 
 
-async function uploadCompanyImage(req, res, next) {
+async function uploadCompanyLogo(req, res, next) {
     const currentDate = new Date(Date.now());
-    const fileName = 'companyImage'
+    const fileName = 'companyLogo'
 
     const result = await uploadFile(req.file, fileName);
 
@@ -17,8 +17,8 @@ async function uploadCompanyImage(req, res, next) {
         etag: result.ETag,
         bucketName: result.Bucket,
     }
-    const userDate = await saveCompanyImage(user);
+    const userDate = await saveCompanyLogo(user);
     return userDate;
 }
 
-module.exports = uploadCompanyImage;
+module.exports = uploadCompanyLogo;

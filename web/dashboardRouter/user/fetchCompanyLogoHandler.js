@@ -1,14 +1,13 @@
 const Boom = require('boom');
 
-const fetchCompanyImage = require('../../../service/impactUserService/fetchCompanyImage');
+const fetchCompanyLogo = require('../../../service/impactUserService/fetchCompanyLogo');
 const { getS3FileStream } = require('../../../utils/s3Utils');
 
 
-async function fetchArchiveHandler(req, res, next) {
+async function fetchCompanyLogoHandler(req, res, next) {
   try {
-    logger.info(`serveFileS3 :: ${JSON.stringify(req.query)}`);
     const email = req.query.email;
-    const resultArr = await fetchCompanyImage(email);
+    const resultArr = await fetchCompanyLogo(email);
 
     if (resultArr.length === 0) throw Boom.badRequest('Link is Invalid');
     const response = resultArr[0];
@@ -21,4 +20,4 @@ async function fetchArchiveHandler(req, res, next) {
   }
 }
 
-module.exports = fetchArchiveHandler;
+module.exports = fetchCompanyLogoHandler;

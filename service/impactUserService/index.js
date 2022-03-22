@@ -7,6 +7,8 @@ const updateUserByEmail = require('./updateUserByEmail');
 const fetchUserByUrl = require('./fetchUserByUrl');
 const saveCompanyImage = require('./saveCompanyImage');
 const fetchCompanyImage = require('./fetchCompanyImage');
+const saveCompanyLogo = require('./saveCompanyLogo');
+const fetchCompanyLogo = require('./fetchCompanyLogo');
 
 module.exports = {
     fetchUser,
@@ -18,4 +20,6 @@ module.exports = {
     fetchUserByUrl,
     saveCompanyImage,
     fetchCompanyImage,
+    saveCompanyLogo,
+    fetchCompanyLogo,
 };
