@@ -1,5 +1,6 @@
 const multer = require('multer');
 const uploadCompanyImage = require('./uploadCompanyImage');
+const fetchCompanyImage = require('./fetchCompanyImage');
 
 
 
@@ -19,4 +20,6 @@ module.exports = (router) => {
         uploadCompanyImage(req);
         res.send(JSON.stringify('file uploaded'));
     })
+
+    router.get('/user/fetchCompanyImage', fetchCompanyImage);
 }

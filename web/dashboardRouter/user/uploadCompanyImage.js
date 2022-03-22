@@ -1,7 +1,7 @@
 const saveCompanyImage = require('../../../service/impactUserService/saveCompanyImage');
-const { uploadFile } = require('../../../utils/awsDocUpload/upload');
+const { uploadFile } = require('../../../utils/s3Utils');
 const moment = require('moment');
-const Boom = require('boom');
+
 
 async function uploadCompanyImage(req, res, next) {
     const currentDate = new Date(Date.now());
