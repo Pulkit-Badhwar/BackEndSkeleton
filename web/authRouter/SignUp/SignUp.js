@@ -76,6 +76,7 @@ async function handler(req) {
       isValid: 'false',
       CompanyURLAuth: 'true',
       Primary: 'true',
+      CompanyName : req.body.CompanyName
     };
     const result = await createUser(user);
     if (req.body.email) {

@@ -10,7 +10,7 @@ const pool = new Pool({
 
 function save(user) {
     return new Promise((resolve, reject) => {
-      pool.query('INSERT INTO  public."ImpactRooms" (firstName, lastName, email, password, isvalid, code, mobile, "CompanyURL", "CompanyID", "CompanyURLAuth", "Primary") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11)', [user.firstName, user.lastName, user.email, user.password, user.isValid, user.uniqueString, user.mobile, user.CompanyURL, user.CompanyID, user.CompanyURLAuth, user.Primary], (err, result) => {
+      pool.query('INSERT INTO  public."ImpactRooms" (firstName, lastName, email, password, isvalid, code, mobile, "CompanyURL", "CompanyID", "CompanyURLAuth", "Primary", "CompanyName") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12)', [user.firstName, user.lastName, user.email, user.password, user.isValid, user.uniqueString, user.mobile, user.CompanyURL, user.CompanyID, user.CompanyURLAuth, user.Primary, user.CompanyName], (err, result) => {
         if (err) {
           console.log('error');
           reject(err);
