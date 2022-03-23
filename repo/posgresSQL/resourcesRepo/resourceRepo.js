@@ -38,7 +38,7 @@ function fetchByEmail(email) {
 
 function fetchByTopic(topic) {
   return new Promise((resolve, reject) => {
-    const sql = `SELECT * FROM public."Resources" WHERE "topic" = '${topic}'`;
+    const sql = `SELECT * FROM public."Resource" WHERE "topic" = '${topic}'`;
     pool.query(sql, (err, result) => {
       if (err) {
         console.log('error');
