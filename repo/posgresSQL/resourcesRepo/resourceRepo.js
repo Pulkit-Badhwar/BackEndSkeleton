@@ -49,6 +49,19 @@ function fetchByTopic(topic) {
   });
 }
 
+function fetchAll(topic) {
+  return new Promise((resolve, reject) => {
+    const sql = `SELECT * FROM public."Resource"`;
+    pool.query(sql, (err, result) => {
+      if (err) {
+        console.log('error');
+        reject(err);
+      }
+      resolve(result.rows);
+    });
+  });
+}
+
 
 
 
@@ -56,4 +69,5 @@ module.exports = {
   save,
   fetchByEmail,
   fetchByTopic,
+  fetchAll,
 }
