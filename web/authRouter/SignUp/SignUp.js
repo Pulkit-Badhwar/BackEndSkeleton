@@ -3,6 +3,10 @@ const { findByEmail } = require('../../../repo/posgresSQL/userRepo')
 const { encrypt } = require('../../../service/crypto/crypto');
 const nodemailer = require('nodemailer');
 const Boom = require('boom');
+const nconf = require('nconf');
+
+nconf.env();
+const API_URL = nconf.get('API_URL');
 
 const randString = () => {
   const len = 8;
@@ -29,7 +33,7 @@ const sendEmail = (email, uniqueString) => {
     from: sender,
     to: email,
     subject: "test email",
-    html: `Press <a href=http://backend-alb-996875402.eu-west-2.elb.amazonaws.com/auth/impact/verifyCodeForEmail/${uniqueString}> here </a> to verify`
+    html: `Press <a href=${API_URL}/auth/impact/verifyCodeForEmail/${uniqueString}> here </a> to verify`
   };
 
 

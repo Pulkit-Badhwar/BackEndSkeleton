@@ -1,5 +1,9 @@
 const nodemailer = require('nodemailer');
 const { fetchUserByEmail } = require('../../../service/impactUserService');
+const nconf = require('nconf');
+
+nconf.env();
+const API_URL = nconf.get('API_URL');
 
 const sendEmail = (email, uniqueString) => {
     const Transport = nodemailer.createTransport({
@@ -17,7 +21,7 @@ const sendEmail = (email, uniqueString) => {
     from: sender,
     to: email,
     subject: "test email",
-    html: `Press <a href=http://backend-alb-996875402.eu-west-2.elb.amazonaws.com/auth/impact/verifyCodeForEmail/${uniqueString}> here </a> to verify`
+    html: `Press <a href=${API_URL}/auth/impact/verifyCodeForEmail/${uniqueString}> here </a> to verify`
   };
 
 
