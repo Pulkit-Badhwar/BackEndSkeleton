@@ -10,7 +10,7 @@ const pool = new Pool({
 
 function save(user, email) {
   return new Promise((resolve, reject) => {
-    pool.query('INSERT INTO  public."Library" ("email", "author", "publishedDate","department", "subject", "topic", "description", "s3key" ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [email, user.author, user.publishedDate, user.department, user.subject, user.topic, user.description, user.s3key], (err, result) => {
+    pool.query('INSERT INTO  public."Library" ("email", "author", "publishedDate","department", "subject", "topic", "description", "s3key", "content" ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9)', [email, user.author, user.publishedDate, user.department, user.subject, user.topic, user.description, user.s3key, user.content], (err, result) => {
       if (err) {
         console.log('error');
         reject(err);

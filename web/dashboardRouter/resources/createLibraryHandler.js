@@ -17,6 +17,7 @@ async function handler(req) {
             topic : req.body.topic,
             description : req.body.description,
             s3key : req.body.s3key,
+            content : req.body.content,
         }
         const userData = await createLibrary(user, email);
         return userData;
