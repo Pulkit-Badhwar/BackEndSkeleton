@@ -10,7 +10,7 @@ const pool = new Pool({
 
 function save(user, email) {
   return new Promise((resolve, reject) => {
-    pool.query('INSERT INTO  public."Resources" ("email", "author", "publishedDate","department", "subject", "topic", "description" ) VALUES ($1, $2, $3, $4, $5, $6, $7)', [email, user.author, user.publishedDate, user.department, user.subject, user.topic, user.description], (err, result) => {
+    pool.query('INSERT INTO  public."Library" ("email", "author", "publishedDate","department", "subject", "topic", "description", "s3key" ) VALUES ($1, $2, $3, $4, $5, $6, $7, $8)', [email, user.author, user.publishedDate, user.department, user.subject, user.topic, user.description, user.s3key], (err, result) => {
       if (err) {
         console.log('error');
         reject(err);
@@ -24,7 +24,7 @@ function save(user, email) {
 
 function fetchByEmail(email) {
   return new Promise((resolve, reject) => {
-    const sql = `SELECT * FROM public."Resources" WHERE "email" = '${email}'`;
+    const sql = `SELECT * FROM public."Library" WHERE "email" = '${email}'`;
     pool.query(sql, (err, result) => {
       if (err) {
         console.log('error');

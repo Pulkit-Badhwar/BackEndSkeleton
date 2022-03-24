@@ -1,12 +1,14 @@
-const createResourcesHandler = require('./createResourcesHandler');
+const createLibraryHandler = require('./createLibraryHandler');
 const fetchAllResourcesHandler = require('./fetchAllResourcesHandler');
-const fetchResourcesByEmailHandler = require('./fetchResourcesByEmailHandler');
+const fetchLibraryByEmailHandler = require('./fetchLibraryByEmailHandler');
 const fetchResourcesImage = require('./fetchResourcesImage');
+const fetchAllImages = require('./fetchAllImages');
 
 
 module.exports = (router) => {
-  router.post('/resources/create',createResourcesHandler)
-  router.get('/resources/fetchByEmail', fetchResourcesByEmailHandler);
+  router.post('/resources/createLib',createLibraryHandler)
+  router.get('/resources/fetchLib', fetchLibraryByEmailHandler);
   router.get('/resources/fetchAll', fetchAllResourcesHandler);
   router.get('/resources/fetchImage', fetchResourcesImage);
+  router.get('/resources/fetchRow', fetchAllImages);
 };

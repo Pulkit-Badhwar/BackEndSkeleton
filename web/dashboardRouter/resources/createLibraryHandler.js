@@ -1,4 +1,4 @@
-const { createResource, fetchResourcesByTopic, fetchResourcesByEmail } = require('../../../service/resourceService');
+const { createLibrary, fetchResourcesByTopic, fetchLibraryByEmail } = require('../../../service/resourceService');
 const moment = require('moment');
 const Boom = require('boom');
 
@@ -7,7 +7,7 @@ async function handler(req) {
     try {
         const email = req.body.email;
 
-        const data = await fetchResourcesByEmail(req.body.email);
+        const data = await fetchLibraryByEmail(req.body.email);
         if(data[0]?.topic != req.body.topic && data[1]?.topic != req.body.topic){
         const user = {
             author : req.body.author,
@@ -16,8 +16,9 @@ async function handler(req) {
             subject : req.body.subject,
             topic : req.body.topic,
             description : req.body.description,
+            s3key : req.body.s3key,
         }
-        const userData = await createResource(user, email);
+        const userData = await createLibrary(user, email);
         return userData;
     }
     else{
@@ -30,7 +31,7 @@ async function handler(req) {
     }
 }
 
-function createResourcesHandler(req, res, next) {
+function createLibraryHandler(req, res, next) {
     handler(req).then((data) => {
         res.json({
             success: true,
@@ -39,4 +40,4 @@ function createResourcesHandler(req, res, next) {
     }).catch((err) => next(err));
 }
 
-module.exports = createResourcesHandler;
+module.exports = createLibraryHandler;

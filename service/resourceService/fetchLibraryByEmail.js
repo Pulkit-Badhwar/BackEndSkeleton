@@ -1,6 +1,6 @@
 const { fetchByEmail } = require('../../repo/posgresSQL/resourcesRepo/resourceRepo')
 
-async function fetchResourcesByEmail(email) {
+async function fetchLibraryByEmail(email) {
   try {
     const data = await fetchByEmail(email);
     return data;
@@ -9,4 +9,4 @@ async function fetchResourcesByEmail(email) {
   }
 }
 
-module.exports = fetchResourcesByEmail;
+module.exports = fetchLibraryByEmail;

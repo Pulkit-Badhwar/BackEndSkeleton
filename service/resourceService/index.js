@@ -1,11 +1,11 @@
-const createResource = require('./createResource');
-const fetchResourcesByEmail = require('./fetchResourcesByEmail');
+const createLibrary = require('./createLibrary');
+const fetchLibraryByEmail = require('./fetchLibraryByEmail');
 const fetchResourcesByTopic = require('./fetchResourcesByTopic');
 const fetchAllResources = require('./fetchAllResources');
 
 module.exports = {
-    createResource,
-    fetchResourcesByEmail,
+    createLibrary,
+    fetchLibraryByEmail,
     fetchResourcesByTopic,
     fetchAllResources,
 };

@@ -1,16 +1,16 @@
-const { fetchResourcesByEmail } = require('../../../service/resourceService');
+const { fetchLibraryByEmail } = require('../../../service/resourceService');
 
 async function handler(req) {
   try {
     const email = req.query.email;
-    const userData = await fetchResourcesByEmail(email);
+    const userData = await fetchLibraryByEmail(email);
     return userData;
   } catch (err) {
     throw err;
   }
 }
 
-function fetchResourcesByEmailHandler(req, res, next) {
+function fetchLibraryByEmailHandler(req, res, next) {
   handler(req).then((data) => {
     res.json({
       success: true,
@@ -19,4 +19,4 @@ function fetchResourcesByEmailHandler(req, res, next) {
   }).catch((err) => next(err));
 }
 
-module.exports = fetchResourcesByEmailHandler;
+module.exports = fetchLibraryByEmailHandler;
