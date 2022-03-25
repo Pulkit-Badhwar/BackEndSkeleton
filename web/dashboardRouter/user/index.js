@@ -8,7 +8,7 @@ const fetchCompanyLogoHandler = require('./fetchCompanyLogoHandler');
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '/Users/pulkitbadhwar/Desktop/work/MetaOrigin/ImpactRooms/impactBackend/uploads/companyImage')
+        cb(null, '/home/ec2-user/impact-backed-dev/raman/uploads')
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname)
