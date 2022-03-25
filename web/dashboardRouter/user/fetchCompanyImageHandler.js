@@ -15,7 +15,7 @@ async function fetchCompanyImageHandler(req, res, next) {
     res.setHeader('Content-Type', 'image/jpeg');
     s3Stream.pipe(res);
   } catch (err) {
-    logger.error(`serveFileS3 :: error :: documentId: ${req.query.document_id} :: ${err}`);
+    logger.error(`serveFileS3 :: error :: ${err}`);
     next(err);
   }
 }
