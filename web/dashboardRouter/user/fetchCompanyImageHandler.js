@@ -10,7 +10,7 @@ async function fetchCompanyImageHandler(req, res, next) {
     const resultArr = await fetchCompanyImage(email);
 
     if (resultArr.length === 0) throw Boom.badRequest('Link is Invalid');
-    const response = resultArr[0];
+    const response = resultArr[resultArr.length-1];
     const s3Stream = await getS3FileStream(response.s3key);
     res.setHeader('Content-Type', 'image/jpeg');
     s3Stream.pipe(res);

@@ -13,7 +13,7 @@ const s3 = new AWS.S3({
 });
 
 
-function uploadFile(file, fileName) {
+function uploadFile(file, fileName, email) {
   return new Promise((resolve, reject) => {
     logger.info(`upload file : ${file.path}`);
     const fileStream = fs.createReadStream(file.path);
@@ -23,7 +23,7 @@ function uploadFile(file, fileName) {
     });
     const params = {
       Bucket: bucketName,
-      Key: `companyid/${fileName}`,
+      Key: `${email}/${fileName}`,
       Body: fileStream,
     };
 

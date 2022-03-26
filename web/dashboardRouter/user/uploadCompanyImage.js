@@ -5,9 +5,9 @@ const moment = require('moment');
 
 async function uploadCompanyImage(req, res, next) {
     const currentDate = new Date(Date.now());
-    const fileName = 'companyImage'
+    const fileName = req.file.originalname
 
-    const result = await uploadFile(req.file, fileName);
+    const result = await uploadFile(req.file, fileName, req.headers.email );
 
     const user = {
         fileName : req.file.originalname,

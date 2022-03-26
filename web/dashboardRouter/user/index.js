@@ -3,12 +3,16 @@ const uploadCompanyImage = require('./uploadCompanyImage');
 const fetchCompanyImageHandler = require('./fetchCompanyImageHandler');
 const uploadCompanyLogo = require('./uploadCompanyLogo');
 const fetchCompanyLogoHandler = require('./fetchCompanyLogoHandler');
+const nconf = require('nconf');
+
+nconf.env();
+const folderLoc = nconf.get('folderLoc');
 
 
 
 var storage = multer.diskStorage({
     destination: function (req, file, cb) {
-        cb(null, '/home/ec2-user/impact-backed-dev/raman/uploads')
+        cb(null, folderLoc)
     },
     filename: function (req, file, cb) {
         cb(null, file.originalname)
