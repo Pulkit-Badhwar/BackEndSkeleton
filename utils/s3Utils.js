@@ -43,6 +43,21 @@ function uploadFile(file, fileName, email) {
   });
 }
 
+function getS3Data(key) {
+  logger.info(`awsS3Utils :: get file : ${key}`);
+  return new Promise((resolve, reject) => {
+    const params = {
+      Bucket: bucketName,
+      Key: key,
+    };
+    s3.getObject(params, function (err, data) {
+      resolve(data);
+    });
+  });
+
+}
+
+
 function getS3FileStream(key) {
   logger.info(`awsS3Utils :: get file : ${key}`);
   return new Promise((resolve, reject) => {
@@ -63,4 +78,5 @@ function getS3FileStream(key) {
 module.exports = {
   uploadFile,
   getS3FileStream,
+  getS3Data,
 }
