@@ -6,7 +6,6 @@ async function handler(req) {
         Stage : req.body.Stage,
         InvestorName : req.body.InvestorName,
     }
-    console.log(user)
     const userData = await updateInvestorByID(user);
     return userData;
   } catch (err) {
