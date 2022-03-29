@@ -1,6 +1,8 @@
 const fetchAllInvestors = require('./fetchAllInvestors');
+const updateInvestorByID = require('./updateInvestorByID');
 
 
 module.exports = {
-    fetchAllInvestors
+    fetchAllInvestors,
+    updateInvestorByID,
 }

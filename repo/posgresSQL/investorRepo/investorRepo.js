@@ -22,9 +22,22 @@ function fetchAll() {
   });
 }
 
+function updateByID(user) {
+  return new Promise((resolve, reject) => {
+    pool.query(`UPDATE public."Investor" SET "Stage" = '${user.Stage}' WHERE "Investor_name" = '${user.InvestorName}'`, (err, result) => {
+      if (err) {
+        console.log('error');
+        reject(err);
+      }
+      resolve(result);
+    });
+  });
+}
+
 
 
 
 module.exports = {
   fetchAll,
+  updateByID,
 }
