@@ -1,13 +1,18 @@
 const multer = require('multer');
-const uploadCompanyImage = require('./uploadCompanyImage');
-const fetchCompanyImageHandler = require('./fetchCompanyImageHandler');
-const uploadCompanyLogo = require('./uploadCompanyLogo');
-const fetchCompanyLogoHandler = require('./fetchCompanyLogoHandler');
 const nconf = require('nconf');
+
+const uploadCompanyImage = require('./uploadCompanyImage');
+const uploadUserImage = require("./uploadUserImage");
+const uploadCompanyLogo = require('./uploadCompanyLogo');
+
+const fetchCompanyImageHandler = require('./fetchCompanyImageHandler');
+const fetchCompanyLogoHandler = require('./fetchCompanyLogoHandler');
+const fetchUserImageHandler = require("./fetchUserImageHandler");
+
+
 
 nconf.env();
 const folderLoc = nconf.get('folderLoc');
-
 
 
 var storage = multer.diskStorage({
@@ -35,4 +40,12 @@ module.exports = (router) => {
     });
 
     router.get('/user/fetchCompanyLogo', fetchCompanyLogoHandler);
+
+
+    router.post('/user/userImage', upload.single('image2'), (req, res, next) => {
+        uploadUserImage(req);
+        res.send(JSON.stringify('file uploaded'));
+    });
+
+    router.get('/user/fetchUserImage', fetchUserImageHandler);
 }

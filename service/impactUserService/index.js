@@ -9,6 +9,8 @@ const saveCompanyImage = require('./saveCompanyImage');
 const fetchCompanyImage = require('./fetchCompanyImage');
 const saveCompanyLogo = require('./saveCompanyLogo');
 const fetchCompanyLogo = require('./fetchCompanyLogo');
+const saveUserImage = require('./saveUserImage');
+const fetchUserImage = require('./fetchUserImage');
 
 module.exports = {
     fetchUser,
@@ -22,4 +24,6 @@ module.exports = {
     fetchCompanyImage,
     saveCompanyLogo,
     fetchCompanyLogo,
+    saveUserImage,
+    fetchUserImage,
 };
