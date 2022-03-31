@@ -34,10 +34,49 @@ function updateByID(user) {
   });
 }
 
+function save(user) {
+  return new Promise((resolve, reject) => {
+    pool.query('INSERT INTO  public."Company" ("CompanyID", "Stage", "Investor_ID") VALUES ($1, $2, $3)', [user.CompanyID, user.Stage, user.Investor_ID], (err, result) => {
+      if (err) {
+        console.log('error');
+        reject(err);
+      }
+      resolve(result);
+    });
+  });
+}
 
+function findByID(user) {
+  return new Promise((resolve, reject) => {
+    const sql = `SELECT * FROM public."Company" WHERE ("Investor_ID" = '${user.Investor_ID}' AND "CompanyID" = '${user.CompanyID}')`;
+    pool.query(sql, (err, result) => {
+      if (err) {
+        console.log('error');
+        reject(err);
+      }
+      resolve(result?.rows);
+    });
+  });
+}
+
+
+function update(user) {
+  return new Promise((resolve, reject) => {
+    pool.query(`UPDATE public."Company" SET "Stage" = '${user.Stage}' WHERE ("CompanyID" = '${user.CompanyID}' AND "Investor_ID" = '${user.Investor_ID}')`, (err, result) => {
+      if (err) {
+        console.log('error');
+        reject(err);
+      }
+      resolve(result);
+    });
+  });
+}
 
 
 module.exports = {
   fetchAll,
   updateByID,
+  save,
+  findByID,
+  update,
 }
