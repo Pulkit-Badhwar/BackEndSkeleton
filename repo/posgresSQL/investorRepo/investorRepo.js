@@ -8,6 +8,7 @@ const pool = new Pool({
 })
 
 
+// investor queries
 
 function fetchAll() {
   return new Promise((resolve, reject) => {
@@ -34,9 +35,15 @@ function updateByID(user) {
   });
 }
 
+
+
+
+
+// intermediate queries
+
 function save(user) {
   return new Promise((resolve, reject) => {
-    pool.query('INSERT INTO  investor."Company" ("CompanyID", "Stage", "Investor_ID") VALUES ($1, $2, $3)', [user.CompanyID, user.Stage, user.Investor_ID], (err, result) => {
+    pool.query('INSERT INTO  investor."Intermediate" ("CompanyID", "Stage", "Investor_ID") VALUES ($1, $2, $3)', [user.CompanyID, user.Stage, user.Investor_ID], (err, result) => {
       if (err) {
         console.log('error');
         reject(err);
@@ -48,7 +55,7 @@ function save(user) {
 
 function findByID(user) {
   return new Promise((resolve, reject) => {
-    const sql = `SELECT * FROM investor."Company" WHERE ("Investor_ID" = '${user.Investor_ID}' AND "CompanyID" = '${user.CompanyID}')`;
+    const sql = `SELECT * FROM investor."Intermediate" WHERE ("Investor_ID" = '${user.Investor_ID}' AND "CompanyID" = '${user.CompanyID}')`;
     pool.query(sql, (err, result) => {
       if (err) {
         console.log('error');
@@ -62,7 +69,7 @@ function findByID(user) {
 
 function update(user) {
   return new Promise((resolve, reject) => {
-    pool.query(`UPDATE investor."Company" SET "Stage" = '${user.Stage}' WHERE ("CompanyID" = '${user.CompanyID}' AND "Investor_ID" = '${user.Investor_ID}')`, (err, result) => {
+    pool.query(`UPDATE investor."Intermediate" SET "Stage" = '${user.Stage}' WHERE ("CompanyID" = '${user.CompanyID}' AND "Investor_ID" = '${user.Investor_ID}')`, (err, result) => {
       if (err) {
         console.log('error');
         reject(err);
