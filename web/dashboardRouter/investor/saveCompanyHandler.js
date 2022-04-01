@@ -10,6 +10,7 @@ async function handler(req) {
         }
         const companyData = await fetchCompanyByID(user);
         if (companyData.length === 0) {
+            console.log('if')
             userData = await saveCompany(user);
         }
         else {

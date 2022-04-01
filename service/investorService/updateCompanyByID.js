@@ -1,8 +1,8 @@
-const { updateByID } = require('../../repo/posgresSQL/investorRepo/investorRepo')
+const { update } = require('../../repo/posgresSQL/investorRepo/investorRepo')
 
 async function updateCompanyByID(user) {
   try {
-    const data = await updateByID(user);
+    const data = await update(user);
     return data;
   } catch (err) {
     throw err;
