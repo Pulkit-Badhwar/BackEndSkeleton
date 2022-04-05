@@ -4,24 +4,24 @@ const Local = require('passport-local');
 const config = require('nconf');
 const Boom = require('boom');
 
-const { authorizeClientUser } = require('../../service/AuthenticationService');
-const { createClientTracker } = require('../../service/clientTrackerService');
-const { fetchUserByEmail } = require('../../service/impactUserService');
+const { authorizeUser } = require('../../service/AuthenticationService');
+const { createUserTracker } = require('../../service/userTrackerService');
+const { fetchUserByEmail } = require('../../service/userService');
 
-async function createClientTrackerHandler(userObj) {
+async function createUserTrackerHandler(userObj) {
   const tokenTime = new Date(userObj.tokenTimeStamp);
   const expiryTime = new Date(userObj.tokenTimeStamp + (config.get('JWT_TOKEN_TIME') * 1000));
 
   logger.info(userObj.token.length);
 
-  const client = {
+  const user = {
     email: userObj.email,
     token: userObj.token,
     time: moment(tokenTime, 'YYYY-MM-DD HH:mm:ss').toISOString().slice(0, 19).replace('T', ' '),
     expiry_time: moment(expiryTime, 'YYYY-MM-DD HH:mm:ss').toISOString().slice(0, 19).replace('T', ' '),
     status: 'active',
   };
-  const data = await createClientTracker(client);
+  const data = await createUserTracker(user);
   return data;
 }
 
@@ -52,7 +52,7 @@ passport.use(new Local({
     userData.then(res => {
       if (res.isvalid == 'true') {
         logger.info(`Passport.js :: email : ${reqEmail} :: password : ${reqPassword}`);
-        const authResult = authorizeClientUser(reqEmail, reqPassword);
+        const authResult = authorizeUser(reqEmail, reqPassword);
         authResult.then(({ user, token }) => {
           logger.info(`Passport.js :: email :: ${reqEmail} :: token : ${token}`);
           const userObj = {
@@ -62,8 +62,8 @@ passport.use(new Local({
           };
           // const value = JSON.stringify(userObj);  Redis functionality temp disabled
           // redis.set(token, value);
-          createClientTrackerHandler(userObj).then((data) => {
-            logger.info(`Create in ClientTracker:: ${JSON.stringify(data)}`);
+          createUserTrackerHandler(userObj).then((data) => {
+            logger.info(`Create in UserTracker:: ${JSON.stringify(data)}`);
           }).catch((err) => logger.error(err));
           callback(null, userObj);
         }).catch((err) => callback(err));

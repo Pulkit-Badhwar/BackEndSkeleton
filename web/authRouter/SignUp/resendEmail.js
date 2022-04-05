@@ -1,5 +1,6 @@
+const { fetchUserByEmail } = require('../../../service/userService');
+
 const nodemailer = require('nodemailer');
-const { fetchUserByEmail } = require('../../../service/impactUserService');
 const nconf = require('nconf');
 
 nconf.env();
@@ -21,7 +22,7 @@ const sendEmail = (email, uniqueString) => {
     from: sender,
     to: email,
     subject: "test email",
-    html: `Press <a href=${API_URL}/auth/impact/verifyCodeForEmail/${uniqueString}> here </a> to verify`
+    html: `Press <a href=${API_URL}/auth/someCompany/verifyCodeForEmail/${uniqueString}> here </a> to verify`
   };
 
 

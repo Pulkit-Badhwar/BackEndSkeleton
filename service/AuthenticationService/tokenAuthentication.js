@@ -1,7 +1,7 @@
 const jwt = require('jsonwebtoken');
 const Boom = require('boom');
 const config = require('nconf');
-const inActiveClientTracker = require('../clientTrackerService/inActiveClientTracker');
+const inActiveUserTracker = require('../userTrackerService/inActiveUserTracker');
 
 function getRedisVal(key) {
   return new Promise((resolve, reject) => {
@@ -32,7 +32,7 @@ function tokenAuthentication(router) {
           // return next(Boom.proxyAuthRequired(err.name));
           logger.info('TokenAuthentication :: Token expired');
           redisDel(token);
-          await inActiveClientTracker(token);
+          await inActiveUserTracker(token);
           return next(Boom.proxyAuthRequired(err.name));
         }
         logger.error(`TokenAuthentication :: TokenAuthenticationError:  ${err}`);

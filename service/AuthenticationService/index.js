@@ -1,7 +1,7 @@
-const authorizeClientUser = require('./authorizeClientUser');
+const authorizeUser = require('./authorizeUser');
 const tokenAuthentication = require('./tokenAuthentication');
 
 module.exports = {
-  authorizeClientUser,
+  authorizeUser,
   tokenAuthentication,
 };

@@ -1,5 +1,5 @@
-const logoutClientHandler = require('./logoutClientHandler');
+const logoutUserHandler = require('./logoutUserHandler');
 
 module.exports = (router) => {
-    router.post('/logout', logoutClientHandler);
+    router.post('/logout', logoutUserHandler);
 }

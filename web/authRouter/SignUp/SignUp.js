@@ -1,4 +1,4 @@
-const { createUser, fetchUserByUrl } = require('../../../service/impactUserService');
+const { createUser, fetchUserByUrl } = require('../../../service/userService');
 const { findByEmail } = require('../../../repo/posgresSQL/userRepo')
 const { encrypt } = require('../../../service/crypto/crypto');
 const nodemailer = require('nodemailer');
@@ -33,7 +33,7 @@ const sendEmail = (email, uniqueString) => {
     from: sender,
     to: email,
     subject: "test email",
-    html: `Press <a href=${API_URL}/auth/impact/verifyCodeForEmail/${uniqueString}> here </a> to verify`
+    html: `Press <a href=${API_URL}/auth/someCompany/verifyCodeForEmail/${uniqueString}> here </a> to verify`
   };
 
 
